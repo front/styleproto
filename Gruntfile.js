@@ -378,7 +378,7 @@ module.exports = function (grunt) {
     },
     shell: {
       styleguide: {
-          command: 'kss-node .tmp/doc <%= yeoman.app %>/styleguide --css .tmp/doc/style.css'
+          command: 'kss-node .tmp/doc <%= yeoman.app %>/styleguide --css .tmp/doc/style.css --template styleguide-template'
       }
     }
   });

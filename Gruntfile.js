@@ -25,6 +25,17 @@ module.exports = function (grunt) {
         files: ['<%= yeoman.app %>/_scss/**/*.{scss,sass}'],
         tasks: ['compass:server', 'autoprefixer:server']
       },
+      styleguide: {
+        files: ['<%= yeoman.app %>/_scss/**/*.{scss,sass}'],
+        tasks: ['compass:styleguide']
+        // TODO: I got a error when including autoprefixer. It removes all 
+        // commens from .css file.
+        // tasks: ['compass:styleguide', 'autoprefixer:styleguide']
+      },
+      styleguideBuild: {
+        files: ['<%= yeoman.app %>/_scss/**/*.{scss,sass}'],
+        tasks: ['shell:styleguide']
+      },
       autoprefixer: {
         files: ['<%= yeoman.app %>/css/**/*.css'],
         tasks: ['copy:stageCss', 'autoprefixer:server']
@@ -102,7 +113,12 @@ module.exports = function (grunt) {
       server: [
         '.tmp',
         '.jekyll'
-      ]
+      ],
+      styleguide: {
+        files: [{
+          src: ['<%= yeoman.app %>/styleguide']
+        }]
+      }
     },
     compass: {
       options: {
@@ -129,6 +145,12 @@ module.exports = function (grunt) {
           debugInfo: true,
           generatedImagesDir: '.tmp/img/generated'
         }
+      },
+      styleguide: {
+        options: {
+          outputStyle: 'expanded',
+          cssDir: '.tmp/doc'
+        }
       }
     },
     autoprefixer: {
@@ -150,7 +172,15 @@ module.exports = function (grunt) {
           src: '**/*.css',
           dest: '.tmp/css'
         }]
-      }
+      },
+      // styleguide: {
+      //   files: [{
+      //     expand: true,
+      //     cwd: '.tmp/doc',
+      //     src: '**/*.css',
+      //     dest: '.tmp/doc'
+      //   }]
+      // },
     },
     jekyll: {
       options: {
@@ -274,6 +304,11 @@ module.exports = function (grunt) {
           src: '**/*.css',
           dest: '.tmp/css'
         }]
+      },
+      styleguide: {
+        files: [
+          { src: ['<%= yeoman.app %>/_scss/styleguide.md'], dest: '.tmp/doc/styleguide.md'}
+        ]
       }
     },
     rev: {
@@ -332,6 +367,7 @@ module.exports = function (grunt) {
     concurrent: {
       server: [
         'compass:server',
+        'compass:styleguide',
         'copy:stageCss',
         'jekyll:server'
       ],
@@ -339,6 +375,11 @@ module.exports = function (grunt) {
         'compass:dist',
         'copy:dist'
       ]
+    },
+    shell: {
+      styleguide: {
+          command: 'kss-node .tmp/doc <%= yeoman.app %>/styleguide --css .tmp/doc/style.css'
+      }
     }
   });
 
@@ -350,9 +391,12 @@ module.exports = function (grunt) {
 
     grunt.task.run([
       'clean:server',
+      'clean:styleguide',
       'concurrent:server',
       'autoprefixer:server',
       'connect:livereload',
+      'copy:styleguide',
+      'shell:styleguide',
       'watch'
     ]);
   });
@@ -394,6 +438,15 @@ module.exports = function (grunt) {
     'usemin',
     'htmlmin'
     ]);
+
+  grunt.registerTask('styleguide', [
+    'clean:server',
+    'clean:styleguide',
+    'jekyll:check',
+    'compass:styleguide',
+    'copy:styleguide',
+    'shell'
+  ]);
 
   grunt.registerTask('default', [
     'check',

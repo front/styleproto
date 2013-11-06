@@ -1,0 +1,40 @@
+/*
+Buttons
+
+Buttons are action items for users.
+
+Markup:
+<a href="#" class="btn {$modifiers}">Link Button</a>
+<button class="btn {$modifiers}">Button Element</button>
+<input type="button" class="btn {$modifiers}" value="Input Element"/>
+
+:hover               - Highlight the button when hovered.
+:focus               - Similar to highlight, but focus when tabbing
+:active              - "Press" the button down when clicked.
+
+Styleguide 1
+*/
+
+button,
+.btn {
+  display: inline-block;
+  padding: 1.2em 1.5em;
+  text-align: left;
+  border-radius: 10px;
+  font-size: 1em;
+  line-height: 1em;
+  color: white;
+  background-color: dodgerblue;
+  border: 1px solid blue;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: lighten(dodgerblue, 10%);
+    outline: none;
+  }
+
+  &:active {
+    background-color: darken(dodgerblue, 10%);
+  }
+}

@@ -27,10 +27,7 @@ module.exports = function (grunt) {
       },
       styleguide: {
         files: ['<%= yeoman.app %>/_scss/**/*.{scss,sass}'],
-        tasks: ['compass:styleguide']
-        // TODO: I got a error when including autoprefixer. It removes all 
-        // commens from .css file.
-        // tasks: ['compass:styleguide', 'autoprefixer:styleguide']
+        tasks: ['compass:styleguide', 'autoprefixer:styleguide']
       },
       styleguideBuild: {
         files: ['<%= yeoman.app %>/_scss/**/*.{scss,sass}'],
@@ -173,14 +170,17 @@ module.exports = function (grunt) {
           dest: '.tmp/css'
         }]
       },
-      // styleguide: {
-      //   files: [{
-      //     expand: true,
-      //     cwd: '.tmp/doc',
-      //     src: '**/*.css',
-      //     dest: '.tmp/doc'
-      //   }]
-      // },
+      styleguide: {
+        files: [{
+          // TODO: There is a issue when writing css comments for kss-node when
+          // using autoprefixer. Double star is needed at the beginning /** */
+          // Remember to check if this get fixed in version 1.x
+          expand: true,
+          cwd: '.tmp/doc',
+          src: '**/*.css',
+          dest: '.tmp/doc'
+        }]
+      },
     },
     jekyll: {
       options: {

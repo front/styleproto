@@ -10,6 +10,9 @@ ehthumbs.db
 Icon?
 Thumbs.db
 
+# Ignore prototype folder
+app/styleguide/
+
 # Always-ignore files and folders #
 *.diff
 *.err

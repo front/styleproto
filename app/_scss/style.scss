@@ -1,6 +1,16 @@
 // 
+// External libraries
+// 
+@import "compass";
+
+// 
 // GLOBAL
 // 
+@import "settings";
+@import "partials/global/variables";
+@import "partials/global/functions";
+@import "partials/global/mixins";
+@import "partials/global/extends";
 
 // 
 // ATOMS
@@ -19,7 +29,9 @@ Like atoms in nature they’re fairly abstract and often not terribly useful on 
 Styleguide 1
 */
 @import "partials/atom/normalize";
+@import "partials/atom/typography";
 @import "partials/atom/buttons";
+@import "partials/atom/tables";
 
 // 
 // MOLECULES

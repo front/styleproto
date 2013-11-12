@@ -105,6 +105,10 @@ template {
 /* ==========================================================================
    Base
    ========================================================================== */
+* {
+    outline: none;
+}
+
 
 /**
  * 1. Set default font family to sans-serif.
@@ -153,35 +157,71 @@ body {
 /* ==========================================================================
    Links
    ========================================================================== */
+/* 
+Links
+
+Links description...
+
+markup:
+<a href="http://google.no">Google Norge</a>
+
+Styleguide 1.1.3
+ */
 
 /**
  * Remove the gray background color from active links in IE 10.
  */
 
 a {
+    color: $link-color;
     background: transparent;
+
+    
+    &:hover,
+    &:focus {
+        color: $link-color-hover;
+        // outline: none;
+    }
+    
+    &:active {
+        color: $link-color-active;
+    }
 }
 
-/**
- * Address `outline` inconsistency between Chrome and other browsers.
- */
-
-a:focus {
-    outline: thin dotted;
-}
-
-/**
- * Improve readability when focused and also mouse hovered in all browsers.
- */
-
-a:active,
-a:hover {
-    outline: 0;
-}
 
 /* ==========================================================================
    Typography
    ========================================================================== */
+
+/* 
+Paragraph
+
+Paragraph description...
+
+markup:
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, 
+ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem 
+non turpis.</p>
+<p>Nullam sit amet enim. Suspendisse id velit vitae ligula volutpat 
+condimentum. Aliquam erat volutpat.</p>
+
+Styleguide 1.1.2
+*/
+
+/*
+Blockquote
+
+Wrap `<blockquote>` around any HTML as the quote. For straight quotes, we recommend a `<p>`.
+Additionally the source can be wrapped in `<small>`
+
+markup: 
+<blockquote>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+  <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+</blockquote>
+
+Styleguide 1.1.5 
+*/
 
 @if not $strict-normalize or $legacy-support-for-ie6 or $legacy-support-for-ie7 {
     /**
@@ -204,10 +244,12 @@ a:hover {
  * contexts in Firefox 4+, Safari 5, and Chrome.
  */
 
-/** 
+/**
 Headings
 
-Headings description...
+All HTML headings, `<h1>` through `<h6>`, are available. `.h1` through `.h6` 
+classes are also available, for when you want to match the font styling of a 
+heading but still want your text to be displayed inline. 
 
 markup:
 <h1 class="{$modifiers}">Header 1</h1>
@@ -224,7 +266,7 @@ markup:
 .h5        - Style header element as h5
 .h6        - Style header element as h6
 
-Styleguide 1.1
+Styleguide 1.1.1
 */
 
 h1,

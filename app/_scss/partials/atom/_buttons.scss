@@ -1,40 +1,95 @@
-/** 
+/**
 Buttons
 
 Buttons are action items for users.
 
 Markup:
-<a href="#" class="btn {$modifiers}">Link Button</a>
-<button class="btn {$modifiers}">Button Element</button>
+<a href="#0" class="{$modifiers}">Link Button</a>
+<button class="{$modifiers}">Button Element</button>
 <input type="button" class="btn {$modifiers}" value="Input Element"/>
 
-:hover               - Highlight the button when hovered.
-:focus               - Similar to highlight, but focus when tabbing
-:active              - "Press" the button down when clicked.
+.btn               - Default button style
+.btn-cta           - Call to action buttons
+.btn-neutral       - Neutral button
+.btn-link          - Link button
 
 Styleguide 1.2
 */
 
-button,
 .btn {
+  color: $btn-color;
+  background-color: $btn-bg-color;
   display: inline-block;
-  padding: 1.2em 1.5em;
-  text-align: left;
-  border-radius: 10px;
+  padding: 6px 12px; // Global mixin?
+  margin-bottom: 0;
   font-size: 1em;
+  font-weight: normal;
   line-height: 1em;
-  color: white;
-  background-color: dodgerblue;
-  border: 1px solid blue;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
   cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px; // Global variable?
+  user-select: none;
 
   &:hover,
   &:focus {
-    background-color: lighten(dodgerblue, 10%);
+    color: $btn-color;
+    background-color: $btn-bg-color-hover;
     outline: none;
   }
 
   &:active {
-    background-color: darken(dodgerblue, 10%);
+    background-color: $btn-bg-color-active;
+  }
+}
+
+.btn-cta {
+  @extend .btn;
+  color: $btn-cta-color;
+  background-color: $btn-cta-bg-color;
+
+  &:hover,
+  &:focus {
+    color: $btn-cta-color;
+    background-color: $btn-cta-bg-color-hover;
+  }
+
+  &:active {
+    background-color: $btn-cta-bg-color-active;
+  }
+}
+
+.btn-neutral {
+  @extend .btn;
+  color: $btn-neutral-color;
+  background-color: $btn-neutral-bg-color;
+
+  &:hover,
+  &:focus {
+    color: $btn-neutral-color-hover;
+    background-color: $btn-neutral-bg-color-hover;
+  }
+
+  &:active {
+    background-color: $btn-neutral-bg-color-active;
+  }
+}
+
+.btn-link {
+  @extend .btn;
+  color: $link-color;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    color: $link-color-hover;
+    background-color: transparent;
+  }
+
+  &:active {
+    color: $link-color-active;
+    background-color: transparent;
   }
 }

@@ -40,7 +40,16 @@
 .kss-mod-name {
   text-align:right;
   width:20%;
-  font-size:0.75em;
+}
+
+.kss-mod-desc {
+  text-transform: uppercase;
+}
+
+.kss-mod-name,
+.kss-mod-desc {
+  font-size: .75em;
+  color: #777;
 }
 
 .kss-mod-example {
@@ -49,6 +58,11 @@
          display:block;
   &>td { display:block; }
 }
+
+.kss-mod-example + .kss-mod-desc-group {
+  border-top: 1px dashed #ddd;
+}
+
 
 .kss-markup {
   margin-bottom:40px;

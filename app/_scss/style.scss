@@ -12,26 +12,9 @@
 @import "partials/global/mixins";
 @import "partials/global/extends";
 
-// 
-// ATOMS
-// 
 
-/*
-Atoms
-
-Atoms are the basic building blocks of matter. Applied to web interfaces, atoms are our HTML tags, such as a form label, an input or a button.
-
-Atoms can also include more abstract elements like color palettes, fonts and even more invisible aspects of an interface like animations.
-
-Like atoms in nature they’re fairly abstract and often not terribly useful on their own. However, they’re good as a reference in the context of a pattern library as you can see all your global styles laid out at a glance.  
-<http://bradfrostweb.com/blog/post/atomic-web-design/#atoms>
-
-Styleguide 1
-*/
-@import "partials/atom/normalize";
-@import "partials/atom/typography";
-@import "partials/atom/buttons";
-@import "partials/atom/tables";
+// Import Atoms 
+@import "partials/atom/atoms";
 
 // 
 // MOLECULES

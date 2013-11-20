@@ -1,0 +1,217 @@
+/* 
+Typography
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim. Suspendisse id velit vitae ligula volutpat condimentum. Aliquam erat volutpat.
+
+Styleguide 1.2
+*/
+
+/**
+Headings
+
+All HTML headings, `<h1>` through `<h6>`, are available. `.h1` through `.h6` 
+classes are also available, for when you want to match the font styling of a 
+heading but still want your text to be displayed inline. 
+
+markup:
+<h1 class="{$modifiers}">Header 1</h1>
+<h2 class="{$modifiers}">Header 2</h2>
+<h3 class="{$modifiers}">Header 3</h3>
+<h4 class="{$modifiers}">Header 4</h4>
+<h5 class="{$modifiers}">Header 5</h5>
+<h6 class="{$modifiers}">Header 6</h6>
+
+.h1        - Style header element as h1
+.h2        - Style header element as h2
+.h3        - Style header element as h3
+.h4        - Style header element as h4
+.h5        - Style header element as h5
+.h6        - Style header element as h6
+
+Styleguide 1.2.1
+*/
+
+
+// Normalize info:
+// Address variable `h1` font-size and margin within `section` and `article`
+// contexts in Firefox 4+, Safari 5, and Chrome.
+
+
+h1,
+.h1 {
+  /* Set the font-size and line-height while keeping a proper vertical rhythm. */
+  @if not $strict-normalize or $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+      @include adjust-font-size-to( $h1-font-size );
+  }
+  @else {
+      font-size: 1em * ($h1-font-size / $base-font-size);
+  }
+
+  /* Set 1 unit of vertical rhythm on the top and bottom margins. */
+  @include leader(1, $h1-font-size);
+  @include trailer(1, $h1-font-size);
+}
+
+@if not $strict-normalize or $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+  h2,
+  .h2 {
+      @include adjust-font-size-to( $h2-font-size );
+      @include leader(1, $h2-font-size);
+      @include trailer(1, $h2-font-size);
+  }
+
+  h3,
+  .h3 {
+      @include adjust-font-size-to( $h3-font-size );
+      @include leader(1, $h3-font-size);
+      @include trailer(1, $h3-font-size);
+  }
+
+  h4,
+  .h4 {
+      @include adjust-font-size-to( $h4-font-size );
+      @include leader(1, $h4-font-size);
+      @include trailer(1, $h4-font-size);
+  }
+
+  h5,
+  .h5 {
+      @include adjust-font-size-to( $h5-font-size );
+      @include leader(1, $h5-font-size);
+      @include trailer(1, $h5-font-size);
+  }
+
+  h6,
+  .h6 {
+      @include adjust-font-size-to( $h6-font-size );
+      @include leader(1, $h6-font-size);
+      @include trailer(1, $h6-font-size);
+  }
+}
+
+/* 
+Paragraph
+
+markup:
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, 
+ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem 
+non turpis.</p>
+<p>Nullam sit amet enim. Suspendisse id velit vitae ligula volutpat 
+condimentum. Aliquam erat volutpat.</p>
+
+Styleguide 1.2.2
+*/
+
+/*
+Blockquote
+
+Wrap `<blockquote>` around any HTML as the quote. For straight quotes, we recommend a `<p>`.
+Additionally the source can be wrapped in `<small>`
+
+markup: 
+<blockquote>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+  <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+</blockquote>
+
+Styleguide 1.2.5 
+*/
+
+@if not $strict-normalize or $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+  
+  // Set 1 unit of vertical rhythm on the top and bottom margin.
+  p,
+  pre {
+      margin: rhythm(1) 0;
+  }
+
+  blockquote {
+      // Set 1 unit of vertical rhythm on the top and bottom margin.
+      margin: rhythm(1) $indent-amount;
+  }
+}
+
+/* 
+Inline elements
+
+markup:
+<p><a href="#">This is a text link</a></p>
+<p><strong>Strong is used to indicate strong importance</strong></p>
+<p><em>This text has added emphasis</em></p>
+<p>The <b>b element</b> is stylistically different text from normal text, without any special importance</p>
+<p>The <i>i element</i> is text that is set off from the normal text</p>
+<p>The <u>u element</u> is text with an unarticulated, though explicitly rendered, non-textual annotation</p>
+<p><del>This text is deleted</del> and <ins>This text is inserted</ins></p>
+<p><s>This text has a strikethrough</s></p>
+<p>Superscript<sup>®</sup></p>
+<p>Subscript for things like H<sub>2</sub>O</p>
+<p><small>This small text is small for for fine print, etc.</small></p>
+<p>Abbreviation: <abbr title="HyperText Markup Language">HTML</abbr></p>
+<p>Keybord input: <kbd>Cmd</kbd></p>
+<p><q cite="https://developer.mozilla.org/en-US/docs/HTML/Element/q">This text is a short inline quotation</q></p>
+<p><cite>This is a citation</cite>
+</p><p>The <dfn>dfn element</dfn> indicates a definition.</p>
+<p>The <mark>mark element</mark> indicates a highlight</p>
+<p><code>This is what inline code looks like.</code></p>
+<p><samp>This is sample output from a computer program</samp></p>
+<p>The <var>variarble element</var>, such as <var>x</var> = <var>y</var></p>
+
+Styleguide 1.2.6
+ */
+
+/* 
+Time
+
+markup:
+<time datetime="2013-04-06T12:32+00:00">2 weeks ago</time>
+
+Styleguide 1.2.7
+ */
+
+/* 
+Preformatted text
+
+markup:
+<pre>   
+P R E F O R M A T T E D T E X T
+! " # $ % &amp; ' ( ) * + , - . /
+0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ?
+@ A B C D E F G H I J K L M N O
+P Q R S T U V W X Y Z [ \ ] ^ _
+` a b c d e f g h i j k l m n o
+p q r s t u v w x y z { | } ~ 
+</pre>
+
+Styleguide 1.2.8
+ */
+
+/* 
+Emphasis colors
+
+markup:
+<p class="error">This is what error text looks like</p>
+<p class="valid">This is what valid text looks like</p>
+<p class="warning">This is what warning text looks like</p>
+<p class="information">This is what information text looks like.</p>
+
+Styleguide 1.2.9
+ */
+
+/* 
+Hr
+
+markup:
+<hr>
+
+Styleguide 1.2.10
+ */
+
+
+/* 
+Caption
+
+markup:
+<p class="caption">A caption can be applied to an image, quote, form field, etc.</p>
+
+Styleguide 1.2.11
+ */

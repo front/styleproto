@@ -1,20 +1,16 @@
-// 
-// External libraries
-// 
+// Imports
+// -------
+
+// External imports
 @import "compass";
 
-// 
-// GLOBAL
-// 
+// Local imports
 @import "settings";
 @import "partials/global/variables";
 @import "partials/global/functions";
 @import "partials/global/mixins";
 @import "partials/global/extends";
-
-
-// Import Atoms 
-@import "partials/atom/atoms";
+@import "partials/atoms/atoms";
 
 // 
 // MOLECULES

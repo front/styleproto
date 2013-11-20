@@ -11,26 +11,11 @@ Like atoms in nature they’re fairly abstract and often not terribly useful on 
 Styleguide 1
 */
 
-// Import Global
-
-// Import Typography
-@import "global";
 @import "normalize";
+@import "global";
 @import "typography";
 @import "lists";
 @import "images";
 @import "forms";
 @import "buttons";
 @import "tables";
-
-// Import Lists
-
-// Import Images
-
-// Import Forms
-
-// Import Buttons
-@import "buttons/buttons";
-
-// Import Tables
-@import "tables/tables";

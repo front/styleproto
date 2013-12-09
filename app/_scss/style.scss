@@ -4,12 +4,17 @@
 // External imports
 @import "compass";
 
-// Local imports
+// Normalize
+@import "../_bower_components/normalize-scss/normalize";
+
+// Global
 @import "settings";
 @import "partials/global/variables";
 @import "partials/global/functions";
 @import "partials/global/mixins";
 @import "partials/global/extends";
+
+// Atoms, Molecules and Organisms
 @import "partials/atoms/atoms";
 
 // 

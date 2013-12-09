@@ -11,9 +11,9 @@ Markup:
 .btn               - Default button style
 .btn-cta           - Call to action buttons
 .btn-neutral       - Neutral button
-.btn-link          - Link button
+.btn-text          - Link button
 
-Styleguide 1.2
+Styleguide 1.6.1
 */
 
 .btn {
@@ -77,7 +77,7 @@ Styleguide 1.2
   }
 }
 
-.btn-link {
+.btn-text {
   @extend .btn;
   color: $link-color;
   background-color: transparent;

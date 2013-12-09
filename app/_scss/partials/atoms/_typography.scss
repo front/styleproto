@@ -185,14 +185,16 @@ p q r s t u v w x y z { | } ~
 Styleguide 1.2.8
  */
 
-/* 
+/** 
 Emphasis colors
 
 markup:
-<p class="error">This is what error text looks like</p>
-<p class="valid">This is what valid text looks like</p>
-<p class="warning">This is what warning text looks like</p>
-<p class="information">This is what information text looks like.</p>
+<p class="{$modifiers}">Lorem ipsum dolor sit amet, consectetuer</p>
+
+.error          - This is what error text looks like
+.valid          - This is what valid text looks like
+.warning        - This is what warning text looks like
+.information    - This is what information text looks like.
 
 Styleguide 1.2.9
  */

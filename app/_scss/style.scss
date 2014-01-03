@@ -8,8 +8,8 @@
 @import "../_bower_components/normalize-scss/normalize";
 
 // Global
-@import "settings";
 @import "partials/global/variables";
+@import "settings";
 @import "partials/global/functions";
 @import "partials/global/mixins";
 @import "partials/global/extends";

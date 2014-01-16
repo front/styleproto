@@ -3,6 +3,8 @@
 
 // External imports
 @import "compass";
+@import "singularitygs";
+@import "breakpoint";
 
 // Normalize
 @import "../_bower_components/normalize-scss/normalize";
@@ -12,11 +14,14 @@
 @import "settings";
 @import "partials/global/functions";
 @import "partials/global/mixins";
+@import "partials/global/helper-classes";
 @import "partials/global/extends";
 
 // Atoms, Molecules and Organisms
 @import "partials/atoms/atoms";
 @import "partials/molecules/molecules";
+@import "partials/layout/layout";
+@import "partials/grid/grid";
 
 // 
 // ORGANISMS
@@ -36,16 +41,4 @@ Building up from molecules to organisms encourages creating standalone, portable
 <http://bradfrostweb.com/blog/post/atomic-web-design/#organisms>
 
 Styleguide 3
-*/
-
-// 
-// Layout
-// 
-
-/*
-Layout
-
-Description to come...
-
-Styleguide 4
 */

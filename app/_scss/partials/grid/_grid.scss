@@ -1,0 +1,116 @@
+/*
+Grid
+
+Description to come...
+
+Styleguide 5
+*/
+
+/**
+Grids
+
+Grids can be used inside any container. If there is more item than fits one row, 
+it will break into more rows.
+
+Markup:
+<div class="{$modifiers}">
+  <div class="list-item list-item-01"></div>
+  <div class="list-item list-item-02"></div>
+  <div class="list-item list-item-03"></div>
+  <div class="list-item list-item-04"></div>
+  <div class="list-item list-item-05"></div>
+  <div class="list-item list-item-06"></div>
+  <div class="list-item list-item-07"></div>
+  <div class="list-item list-item-08"></div>
+  <div class="list-item list-item-09"></div>
+  <div class="list-item list-item-10"></div>
+  <div class="list-item list-item-11"></div>
+  <div class="list-item list-item-12"></div>
+</div>
+
+.g__small          - Small grid
+.g__medium         - Medium grid
+.g__large          - Large grid
+
+Styleguide 5.1.1
+*/
+
+$output: 'float';
+
+[class^="g__"] {
+  @extend .clearfix;
+
+  // Documentation style
+  .list-item {
+    .docs & {
+      background-color: $docs-bg;
+      height: $space-double; 
+      margin-bottom: $space-half;
+      border: 1px solid $docs-border;
+      // TODO: Remove above style          
+    }
+  }
+}
+
+.g__small {
+  .list-item {   
+    @include grid-span(1);
+
+    @include breakpoint(max-width $break-small) {
+      &:nth-child(even) {
+        margin-right: 0;
+      }
+    }
+
+    @include breakpoint($break-small $break-medium) {
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+      @include grid-span(2);
+    }
+
+    @include breakpoint($break-medium) {
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+      @include grid-span(3);
+    }
+  }
+}
+
+.g__medium {
+  .list-item {
+    @include grid-span(2);
+
+    @include breakpoint($break-small $break-medium) {
+      &:nth-child(even) {
+        margin-right: 0;
+      }
+      @include grid-span(3);
+    }
+
+    @include breakpoint($break-medium) {
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+      @include grid-span(4);
+    }
+  }
+}
+
+.g__large {
+  .list-item {
+    @include grid-span(2);
+
+    @include breakpoint($break-small) {
+      @include grid-span(6);
+    }
+
+    @include breakpoint($break-medium) {
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+      @include grid-span(6);
+    }
+  }
+}

@@ -1,0 +1,20 @@
+/*
+Layout
+
+Description to come...
+
+Styleguide 4
+*/
+
+$grids: 2;
+$grids: add-grid(6 at $break-small);
+$grids: add-grid(12 at $break-medium);
+
+$gutters: .1; // 25% of one column width
+$gutters: add-gutter(1/3 at $break-small);
+$gutters: add-gutter(.5 at $break-medium);
+
+.l-container {
+  @extend .clearfix;
+  // @include background-grid;
+}

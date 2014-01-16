@@ -5,6 +5,7 @@
 $color-blue: dodgerblue;
 $color-blue-desaturated: #A4ACB2;
 $color-yellow-desaturated: #B2B2A4;
+$color-gray: #aaa;
 $color-lightgray: #f0f0f0;
 
 // Links
@@ -32,6 +33,15 @@ $btn-neutral-bg-color: $color-lightgray;
 $btn-neutral-bg-color-hover: lighten($btn-neutral-bg-color, 2%);
 $btn-neutral-bg-color-active: darken($btn-neutral-bg-color, 3%);
 
+// Docs element
+$docs-bg: $color-lightgray;
+$docs-border: $color-gray;
+
+// Space
+// -----------------------------------------------------------------------------
+$space: $base-font-size;
+$space-half: $space * 0.5;
+$space-double: $space * 2;
 
 // Normalize variables
 // -----------------------------------------------------------------------------
@@ -66,8 +76,14 @@ $h6-font-size: 1    * $base-font-size !default;
 $indent-amount: 40px !default;
 
 
+// Main breakpoints
+// -----------------------------------------------------------------------------
+$break-small: 30em; // 480px
+$break-medium: 43em; // 688px 
+$break-large: 60em; // 960px
+
 // IE support
-// ----------
+// -----------------------------------------------------------------------------
 
 // Set this to true to add support for IE 6.
 $legacy-support-for-ie6: false !default; // Override default set in Compass' Support partial.

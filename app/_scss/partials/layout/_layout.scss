@@ -18,3 +18,200 @@ $gutters: add-gutter(.5 at $break-medium);
   @extend .clearfix;
   // @include background-grid;
 }
+
+// Documentation style
+[class^="l-item__"] {
+  .docs & {
+    background-color: $docs-bg;
+    min-height: $space-double; 
+    margin-bottom: $space-half;
+    border: 1px solid $docs-border;
+  }
+}
+
+/* 
+Layout, one column
+
+Description...
+
+Markup:
+<div class="l-full">
+  <div class="l-item__main"></div>
+</div>
+
+Styleguide 4.1
+ */
+
+.l-full {
+  @extend .clearfix;
+  .l-item__main {
+    @include grid-span(2);
+  }
+}
+
+/** 
+Layout, two columns
+
+Description...
+
+Markup:
+<div class="{$modifiers}">
+  <div class="l-item__main"></div>
+  <div class="l-item__aside"></div>
+</div>
+
+.l-half           - Split in two
+.l-two-one        - Main left with small right
+.l-one-two        - Main right with small aside to left
+
+Styleguide 4.2
+ */
+
+.l-half {
+  @extend .clearfix;
+
+  .l-item__main {   
+    @include grid-span(2);
+  }
+
+  .l-item__aside {   
+    @extend .l-item__main;
+  }
+
+  @include breakpoint($break-small) {
+    .l-item__main {
+      @include grid-span(3,1);
+    }
+
+    .l-item__aside {
+      @include grid-span(3,4);
+    }
+  }
+
+  @include breakpoint($break-medium) {
+    .l-item__main {
+      @include grid-span(6,1);
+    }
+
+    .l-item__aside {
+      @include grid-span(6,7);
+    }
+  }
+}
+
+.l-two-one {
+  @extend .clearfix;
+
+  .l-item__main {
+    @include grid-span(2);
+  }
+
+  .l-item__aside {
+    @extend .l-item__main;
+  }
+
+  @include breakpoint($break-small) {
+    .l-item__main {
+      @include grid-span(4,1);
+    }
+
+    .l-item__aside {
+      @include grid-span(2,5);
+    }
+  }
+
+  @include breakpoint($break-medium) {
+    .l-item__main {
+      @include grid-span(8,1);
+    }
+    .l-item__aside {
+      @include grid-span(4,9);
+    }
+  }
+}
+
+.l-one-two {
+  @extend .clearfix;
+
+  .l-item__main {
+    @include grid-span(2);
+  }
+
+  .l-item__aside {
+    @extend .l-item__main;
+  }
+
+  @include breakpoint($break-small) {
+    .l-item__main {
+      @include grid-span(4,3);
+    }
+
+    .l-item__aside {
+      @include grid-span(2,1);
+    }
+  }
+
+  @include breakpoint($break-medium) {
+    .l-item__main {
+      @include grid-span(8,5);
+    }
+
+    .l-item__aside {
+      @include grid-span(4,1);
+    }
+  }
+}
+
+/*
+Layout, three columns
+
+Description...
+
+Markup:
+<div class="l-one-two-one">
+  <div class="l-item__main"></div>
+  <div class="l-item__aside-first"></div>
+  <div class="l-item__aside-second"></div>
+</div>
+
+Styleguide 4.3
+ */
+
+.l-one-two-one {
+  .l-item__main {
+    @include grid-span(2);
+  }
+
+  [class^=".l-item__aside"] {
+    @extend .l-item__main;
+  }
+
+  @include breakpoint($break-small) {
+    .l-item__main {
+      @include grid-span(6,1);
+    }
+
+    .l-item__aside-first {
+      @include grid-span(3,1);
+      margin-right: 0;
+    }
+
+    .l-item__aside-second {
+      @include grid-span(3,4);
+    }
+  }
+
+  @include breakpoint($break-medium) {
+    .l-item__main {
+      @include grid-span(6,4);
+    }
+
+    .l-item__aside-first {
+      @include grid-span(3,1);
+    }
+
+    .l-item__aside-second {
+      @include grid-span(3,10);
+    }
+  }
+}

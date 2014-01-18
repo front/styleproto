@@ -9,6 +9,21 @@ module.exports = function (grunt) {
     path: {
       app: 'app',
       dist: 'dist'
+    },
+
+    jekyll: {
+      build: {
+        dest: '_site'
+      }
+    },
+
+    compass: {
+      dist: {
+        config: {
+          sassDir: '_sass',
+          cssDir: '.tmp/css'
+        }
+      }
     }
   });
 

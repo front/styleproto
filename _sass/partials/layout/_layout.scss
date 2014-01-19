@@ -17,6 +17,14 @@ $gutters: add-gutter(.5 at $break-medium);
 .l-container {
   @extend .clearfix;
   // @include background-grid;
+  
+  max-width: $break-large;
+  margin: 0 auto;
+
+  @include breakpoint(max-width $break-large + 1) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
 
 // Documentation style

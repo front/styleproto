@@ -5,7 +5,7 @@ module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt);
 
   grunt.initConfig({
-    
+
     jekyll: {
       build: {
         dest: '_site'
@@ -23,12 +23,18 @@ module.exports = function (grunt) {
         fontsDir: 'fonts'
 
       },
-      dist: {
+      prod: {
         options: {
-          cssDir: 'css'
+          cssDir: 'css', 
+          environment: 'production'
         }   
       },
-      site: {
+      dev: {
+        options: {
+          cssDir: '.tmp/css'
+        }   
+      },
+      dev_direct: {
         options: {
           cssDir: '_site/css'
         }
@@ -36,13 +42,13 @@ module.exports = function (grunt) {
     },
 
     watch: {
-      dist: {
+      sass: {
         files: '_sass/**/*.scss',
-        tasks: ['compass:dist']
+        tasks: ['compass:prod']
       },
-      site: {
+      sass_direct: {
         files: '_sass/**/*.scss',
-        tasks: ['compass:site'],
+        tasks: ['compass:dev_direct'],
         options: {
           spawn: false
         }
@@ -69,24 +75,40 @@ module.exports = function (grunt) {
           baseDir: '_site'
         }
       }
+    }, 
+
+    clean: {
+      prod: ['css'],
+      dev: ['.tmp', '_site']
+    }, 
+
+    copy: {
+      css_dev: {
+        expand: true,
+        cwd: '.tmp',
+        src: 'css/*',
+        dest: '_site/'
+      }
     }
   });
 
   // Define Tasks
   grunt.registerTask('build', [
-    'compass',
-    'jekyll'
+    'compass:dev',
+    'jekyll',
+    'copy:css_dev'
   ]);
 
-  grunt.registerTask('site', [
+  grunt.registerTask('direct', [
     'build',
     'browser_sync',
-    'watch:site'
+    'watch:sass_direct'
   ]);
 
   grunt.registerTask('default', [
     'build',
     'browser_sync',
-    'watch:dist'
+    'watch:sass',
+    'watch:jekyll'
   ]);
 };

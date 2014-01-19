@@ -36,7 +36,8 @@ app/styleguide/
 *.zip
 
 # Ignore for Yeoman-Jekyll projects #
-app/_bower_components
+_bower_components
+_site
 dist
 node_modules
 .tmp

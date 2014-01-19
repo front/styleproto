@@ -88,6 +88,17 @@ module.exports = function (grunt) {
         cwd: '.tmp',
         src: 'css/*',
         dest: '_site/'
+      },
+      styleguide_doc: {
+        files: [
+          {expand: true, cwd: '_sass/', src: 'styleguide.md', dest: '.tmp/css/'}
+        ]
+      }
+    },
+
+    shell: {
+      styleguide: {
+        command: 'kss-node .tmp/css styleguide --css .tmp/css/style.css --template styleguide-template'
       }
     }
   });
@@ -95,6 +106,8 @@ module.exports = function (grunt) {
   // Define Tasks
   grunt.registerTask('build', [
     'compass:dev',
+    'copy:styleguide_doc',
+    'shell:styleguide',
     'jekyll',
     'copy:css_dev'
   ]);

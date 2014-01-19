@@ -38,6 +38,11 @@ module.exports = function (grunt) {
         options: {
           cssDir: '_site/css'
         }
+      },
+      styleguide_direct: {
+        options: {
+          cssDir: '_site/styleguide/public'
+        }
       }
     },
 
@@ -48,7 +53,7 @@ module.exports = function (grunt) {
       },
       sass_direct: {
         files: '_sass/**/*.scss',
-        tasks: ['compass:dev_direct'],
+        tasks: ['compass:dev_direct', 'compass:styleguide_direct'],
         options: {
           spawn: false
         }

@@ -42,7 +42,7 @@ paginate: 10
 paginate_path: 'page:num'
 
 # Markdown library
-markdown: maruku
+# markdown: maruku
 # Markdown library options
 # maruku:
   # use_tex:    false
@@ -52,4 +52,4 @@ markdown: maruku
   # png_url:    /images/latex
 
 # Use Pygments to highlight code blocks
-pygments: true
+# pygments: true

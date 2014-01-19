@@ -59,7 +59,7 @@ module.exports = function (grunt) {
         }
       },
       jekyll: {
-        files: ['_layouts/*.html', 'css/*.css'],
+        files: ['**/*.html', 'css/*.css'],
         tasks: ['jekyll']
       }
     },
@@ -126,7 +126,6 @@ module.exports = function (grunt) {
   grunt.registerTask('default', [
     'build',
     'browser_sync',
-    'watch:sass',
-    'watch:jekyll'
+    'watch'
   ]);
 };

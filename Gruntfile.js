@@ -98,6 +98,11 @@ module.exports = function (grunt) {
         files: [
           {expand: true, cwd: '_sass/', src: 'styleguide.md', dest: '.tmp/css/'}
         ]
+      },
+      bower: {
+        files: [
+          {expand: true, cwd: '_bower_components/modernizr', src: 'modernizr.js', dest: '_site/js/partials/modernizr'}
+        ]
       }
     },
 
@@ -114,7 +119,8 @@ module.exports = function (grunt) {
     'copy:styleguide_doc',
     'shell:styleguide',
     'jekyll',
-    'copy:css_dev'
+    'copy:css_dev',
+    'copy:bower'
   ]);
 
   grunt.registerTask('direct', [

@@ -1,11 +1,18 @@
 ---
 layout: default
-title: Your New Jekyll Site
+title: Overview
 ---
 
-<section class="home posts">
-  <h1>Blog Posts</h1>
-  {% for post in site.posts %}
-    <article><time>{{ post.date | date_to_string }}</time> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></article>
-  {% endfor %}
+<section class="l-container">
+  <h1>Index</h1>
+  <ul>
+    <li><a href="styleguide">Automatic styleguide</a></li>
+    <li><a href="layout">Layout</a></li>
+    <li><a href="grids">Grids</a></li>
+  </ul>
+
+  <h2>Templates</h2>
+  <ul>
+    <li><a href="templates/front-page">Front page</a></li>
+  </ul>
 </section>

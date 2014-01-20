@@ -108,7 +108,7 @@ module.exports = function (grunt) {
 
     shell: {
       styleguide: {
-        command: 'kss-node .tmp/css styleguide --css .tmp/css/style.css --template styleguide-template'
+        command: 'kss-node .tmp/css styleguide --css .tmp/css/style.css --template kss-node-templates/kss-node-template-2'
       }
     }
   });

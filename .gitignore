@@ -33,9 +33,10 @@ styleguide/
 *.tar
 *.zip
 
-# Ignore for Yeoman-Jekyll projects #
+# Ignore folders
 _bower_components
 _site
+css
 dist
 node_modules
 .tmp

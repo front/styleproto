@@ -1,11 +1,31 @@
-// Page header
-// -----------------------------------------------------------------------------
+/*
+Page header
+
+Markup:
+<header class="page-header"></header>
+
+Styleguide 3.1.1
+*/
+
+// TODO: Add molecules inside page header
 .page-header {
   background-color: #efefef;
 }
 
-// Page footer
 // -----------------------------------------------------------------------------
+
+/* 
+Page footer
+
+Markup:
+<footer class="page-footer"></footer>
+
+Styleguide 3.1.2
+ */
+
+// TODO: Add molecules inside page footer
 .page-footer {
   @extend .page-header;
 }
+
+// -----------------------------------------------------------------------------

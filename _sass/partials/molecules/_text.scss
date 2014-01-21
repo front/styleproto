@@ -1,0 +1,89 @@
+/*
+Byline author only
+
+Markup:
+<div class="byline">by Author Name</div>
+
+Styleguide 3.1.1
+*/
+
+.byline {
+  font-style: italic;
+}
+
+// -----------------------------------------------------------------------------
+
+/*
+Byline author time
+
+Markup:
+<div class="byline">by Author Name on <time datetime="2013-04-06T12:32+00:00">June 3rd</time></div>
+
+Styleguide 2.1.2
+*/
+
+
+// -----------------------------------------------------------------------------
+
+/*
+Address
+
+Markup:
+<div class="vcard">
+  <div class="org">Company Name</div>
+  <div class="adr">
+    <div class="street-address">1234 Main St.</div>
+    <span class="locality">Anywhere</span>,
+    <span class="postal-code">101010</span>,
+    <abbr class="region" title="California">CA</abbr>
+    <div class="country-name">U.S.A</div>
+  </div>
+  <div class="tel">+1.888.123.4567</div>
+</div>
+
+Styleguide 2.1.3
+*/
+
+
+// -----------------------------------------------------------------------------
+
+/*
+Blockquote with citation
+
+Markup:
+<blockquote>
+    <p>A block quotation (also known as a long quotation or extract) is a quotation in a written document, that is set off from the main text as a paragraph, or block of text, and typically distinguished visually using indentation and a different typeface or smaller size quotation. </p>
+  <cite class="citation">Quote Source</cite>
+</blockquote>
+
+Styleguide 2.1.4
+*/
+
+
+// -----------------------------------------------------------------------------
+
+/*
+Intro text
+
+Markup:
+<p class="intro">The intro text may be a lead-in to the passage of text, or it may just be used to create a visual distinction between the rest of the passage of text.</p>
+
+Styleguide 2.1.5
+*/
+
+
+// -----------------------------------------------------------------------------
+
+/*
+Pullquote
+
+Markup:
+<blockquote class="pullquote">
+    <p>A pull quote is a quotation or excerpt from an article</p>
+</blockquote>
+
+Styleguide 2.1.6
+*/
+
+
+// -----------------------------------------------------------------------------

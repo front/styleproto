@@ -1,3 +1,24 @@
 body {
-  // @include debug-vertical-alignment;
+  font-family: 'Source Sans Pro', Verdana, Arial, sans-serif;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  // @include adjust-font-size-to($base-font-size);
+
+  // Show horizontal lines in development
+  @if($show-vertical-rythm) {
+    @include debug-vertical-alignment;
+  }
+
+  @if($show-breakpoint-bg) {  
+    background-color: hsla(0, 100%, 50%, .1);
+    @include breakpoint($break-small) {
+      background-color: hsla(50, 100%, 50%, .1);
+    }
+    @include breakpoint($break-medium) {
+      background-color: hsla(100, 100%, 50%, .1);
+    }
+    @include breakpoint($break-large) {
+      background-color: hsla(150, 100%, 50%, .1);
+    }
+  }
 }

@@ -46,6 +46,7 @@ Styleguide 1.7.1
   th {
     vertical-align: bottom;
     border-bottom: 2px solid #ddd;
+    padding: 8px;
   }
 
   td {
@@ -54,4 +55,9 @@ Styleguide 1.7.1
     vertical-align: top;
     border-top: 1px solid #ddd;
   }
+}
+
+td,
+th {
+  text-align: left;
 }

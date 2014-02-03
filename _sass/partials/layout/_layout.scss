@@ -16,8 +16,12 @@ $gutters: add-gutter(.5 at $break-medium);
 
 .l-container {
   @extend .clearfix;
-  // @include background-grid;
   
+  // Show vertical grid columns in development
+  @if($show-grid-columns) {
+    @include background-grid;
+  }
+
   max-width: $break-large;
   margin: 0 auto;
 

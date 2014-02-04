@@ -21,3 +21,20 @@ Styleguide 3.5.2
 
 
 // -----------------------------------------------------------------------------
+
+// Misc sections
+// -----------------------------------------------------------------------------
+
+// Contact section
+.contact-section {
+  @include breakpoint(max-width $break-medium) {
+    @include background-image(linear-gradient(top, $docs-bg, darken($docs-bg, 10)));
+  }
+}
+
+// Featured section
+.featured-section {
+  .featured {
+    margin-top: $space * 3;
+  }
+}

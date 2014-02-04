@@ -1,6 +1,5 @@
 // Colors
 // -----------------------------------------------------------------------------
-
 // Don't use this variable directly in code
 $color-black: #000;
 $color-white: #fff;
@@ -10,31 +9,6 @@ $color-yellow-desaturated: #B2B2A4;
 $color-gray: #aaa;
 $color-gray-dark: #333;
 $color-gray-light: #f0f0f0;
-
-// Links
-$link-color: $color-blue;
-$link-color-hover: lighten($link-color, 10%);
-$link-color-active: darken($link-color, 5%);
-
-// Buttons
-// Default button
-$btn-color: white;
-$btn-bg-color: $color-blue-desaturated;
-$btn-bg-color-hover: lighten($btn-bg-color, 5%);
-$btn-bg-color-active: darken($btn-bg-color, 3%);
-
-// Call to action button
-$btn-cta-color: white;
-$btn-cta-bg-color: $color-yellow-desaturated;
-$btn-cta-bg-color-hover: lighten($btn-cta-bg-color, 5%);
-$btn-cta-bg-color-active: darken($btn-cta-bg-color, 3%);
-
-// Neutral button
-$btn-neutral-color: #777;
-$btn-neutral-color-hover: #555;
-$btn-neutral-bg-color: $color-gray-light;
-$btn-neutral-bg-color-hover: lighten($btn-neutral-bg-color, 2%);
-$btn-neutral-bg-color-active: darken($btn-neutral-bg-color, 3%);
 
 // Space
 // -----------------------------------------------------------------------------

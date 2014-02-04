@@ -26,8 +26,8 @@ $gutters: add-gutter(.5 at $break-medium);
   margin: 0 auto;
 
   @include breakpoint(max-width $break-large + 1) {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: $space;
+    margin-right: $space;
   }
 }
 

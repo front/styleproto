@@ -9,6 +9,27 @@ $show-breakpoint-bg: false !default;
 $docs-bg: $color-gray-light;
 $docs-border: $color-gray;
 
+// Buttons
+// -----------------------------------------------------------------------------
+// Default button
+$btn-color: white;
+$btn-bg-color: $color-blue;
+$btn-bg-color-hover: scale-color($btn-bg-color, $lightness: 15%);
+$btn-bg-color-active: scale-color($btn-bg-color, $lightness: -15%);
+
+// Call to action button
+$btn-cta-color: white;
+$btn-cta-bg-color: $color-yellow-desaturated;
+$btn-cta-bg-color-hover: lighten($btn-cta-bg-color, 5%);
+$btn-cta-bg-color-active: darken($btn-cta-bg-color, 3%);
+
+// Neutral button
+$btn-neutral-color: #777;
+$btn-neutral-color-hover: #555;
+$btn-neutral-bg-color: $color-gray-light;
+$btn-neutral-bg-color-hover: lighten($btn-neutral-bg-color, 2%);
+$btn-neutral-bg-color-active: darken($btn-neutral-bg-color, 3%);
+
 // Typography
 // -----------------------------------------------------------------------------
 
@@ -26,24 +47,37 @@ $base-color: $color-black;
 
 // The font sizes for h1-h6.
 // Perfect fourth http://modularscale.com/scale/?px1=16&px2=&ra1=1.333&ra2=0
-$h1-font-size: 4.209    * $base-font-size !default;
-$h2-font-size: 3.157    * $base-font-size !default;
-$h3-font-size: 2.369    * $base-font-size !default;
-$h4-font-size: 1.777    * $base-font-size !default;
-$h5-font-size: 1.333    * $base-font-size !default;
-$h6-font-size: 1        * $base-font-size !default;
+$h1-font-size: 4.209    * $base-font-size !default; // 67.339px
+$h2-font-size: 3.157    * $base-font-size !default; // 50.517px
+$h3-font-size: 2.369    * $base-font-size !default; // 37.897px
+$h4-font-size: 1.777    * $base-font-size !default; // 28.43px
+$h5-font-size: 1.333    * $base-font-size !default; // 21.328px
+$h6-font-size: 1        * $base-font-size !default; // 16px
 
 $header-color-first: $color-black;
 $header-color-second: $color-gray-dark;
 
-// The amount lists and blockquotes are indented.
-$indent-amount: 40px !default;
+// Links
+$link-color: $color-blue;
+$link-color-hover: lighten($link-color, 10%);
+$link-color-active: darken($link-color, 5%);
 
 // Blockquote
 $blockquote-border-color: $color-gray-dark;
 $blockquote-color: $color-gray-dark;
 $blockquote-font-size: 1.333 * $base-font-size !default;
 
+// Navigation
+// -----------------------------------------------------------------------------
+$nav-bg-color: $color-gray-light;
+$nav-border-color: scale-color($nav-bg-color, $lightness: -15%);
+$nav-bg-color-focus: scale-color($nav-bg-color, $lightness: 25%); 
+
+// Sections
+// -----------------------------------------------------------------------------
+// Footer
+$footer-bg-color: $color-black;
+$footer-color: $color-gray;
 
 // Main breakpoints
 // -----------------------------------------------------------------------------

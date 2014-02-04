@@ -1,52 +1,74 @@
 ---
 layout: default
 title: Front page template
-docs: true
+<!-- docs: true -->
 ---
 <header class="page-header">
   <div class="l-container">
-    <h1 href="#0" class="logo">Logo</h1>
+    <h1 class="logo">
+      <a href="#">
+        <span class="logo--name">Firmanavn</span>
+        <img class="logo--img" src="/img/logo.svg" alt="Logo">
+      </a>
+    </h1>
+    <a class="nav-main-toggle visible-small" href="#nav__main">m</a>
   </div>
 </header>
-<main role="main">
+<main role="main" class="page-main">
   <article class="banner">
     <div class="l-container">
-      <h1 class="banner--title">Banner title</h1>
-      <p class="banner--teaser">Banner teaser text</p>
-      <a href="#0" class="btn banner--btn">Banner button</a>
+      <h1 class="banner--title">Banner tittel</h1>
+      <p class="banner--desc">Kort beskrivelse om hva vi gjør</p>
+      <a href="#0" class="btn banner--btn">CTA knapp</a>
     </div>
   </article>
-  <aside class="l-container">
-    <h1 class="h6">Services</h1>
-    <div class="g-medium">
-      <div class="g-item">
-        <article>
-          <h2 class="h3">Web design</h2>
-          <p>Some description</p>
-        </article>
-      </div>
-      <div class="g-item">
-        <article>
-          <h2 class="h3">Front end development</h2>
-          <p>Some description</p>
-        </article>
-      </div>
-      <div class="g-item">
-        <article>
-          <h2 class="h3">Back end development</h2>
-          <p>Some description</p>
-        </article>
-      </div>
+  <section class="l-container featured-section">
+    <h1 class="h6 visuallyhidden">Tjenester</h1>
+    <div class="g-medium">  
+      
+      <article class="g-item featured">
+        <img class="featured--img" src="/img/logo.svg" alt="Logo">
+        <h2 class="featured--title">Målrettet</h2>
+        <p class="featured--desc">Et par ord som forkarer litt mer</p>
+        <a href="#0" class="featured--link">Link til tjeneste</a>
+      </article>
+  
+      <article class="g-item featured">
+        <img class="featured--img" src="/img/logo.svg" alt="Logo">
+        <h2 class="featured--title">Samarbeid</h2>
+        <p class="featured--desc">Et par ord som forkarer litt mer</p>
+        <a href="#0" class="featured--link">Link til tjeneste</a>
+      </article>
+    
+      <article class="g-item featured">
+        <img class="featured--img" src="/img/logo.svg" alt="Logo">
+        <h2 class="featured--title">Suksesshistorier</h2>
+        <p class="featured--desc">Et par ord som forkarer litt mer</p>
+        <a href="#0" class="featured--link">Link til tjeneste</a>
+      </article>
+  
     </div>
-  </aside>
+  </section>
 </main>
-<nav class="l-container">
-  <ul role="navigation">
-    <li><a href="#0">Nav link 1</a></li>
-    <li><a href="#0">Nav link 2</a></li>
-    <li><a href="#0">Nav link 3</a></li>
-    <li><a href="#0">Nav link 4</a></li>
-    <li><a href="#0">Nav link 5</a></li>
+<aside class="contact-section hidden">
+  <div class="l-container">
+    <div class="widget widget__contact">
+      <h2 class="widget--title widget__contact--title">Ta kontakt!</h2>
+      <p class="widget--desc widget__contact--desc">Ikke nøl med å ringe eller sende oss en e-post for å snakke om hvordan vi kan samarbeide. Vi tar også gjerne imot <a href="#0">besøk</a>.</p>
+      <ul class="widget__contact--info">
+        <li><a class="widget__contact--info--phone" href="tel:69304400">69 30 44 00</a></li>
+        <li><a class="widget__contact--info--email" href="mailto:post@frontkom.no">post@frontkom.no</a></li>
+      </ul>
+    </div>
+  </div>
+</aside>
+<nav class="nav nav__main" id="nav__main">
+  <ul class="nav--list" role="navigation">
+    <li class="nav--item"><a class="nav--link" href="#0">Nav link 1</a></li>
+    <li class="nav--item"><a class="nav--link" href="#0">Nav link 2</a></li>
+    <li class="nav--item"><a class="nav--link" href="#0">Nav link 3</a></li>
+    <li class="nav--item"><a class="nav--link" href="#0">Nav link 4</a></li>
+    <li class="nav--item"><a class="nav--link" href="#0">Nav link 5</a></li>
   </ul>
 </nav>
 <footer class="page-footer">

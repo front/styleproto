@@ -1,3 +1,5 @@
+// Page header
+// -----------------------------------------------------------------------------
 /*
 Page header
 
@@ -9,11 +11,29 @@ Styleguide 3.1.1
 
 // TODO: Add molecules inside page header
 .page-header {
-  background-color: #efefef;
+  padding: $space-half 0;
+  position: relative;
 }
 
-// -----------------------------------------------------------------------------
+.page-header .logo {
+  max-width: 40px;
+}
 
+.page-header .nav-main-toggle {
+  position: absolute;
+  right: $space;
+  top: $space;
+}
+
+
+// Page main
+// -----------------------------------------------------------------------------
+.page-main {
+  margin-bottom: $space * 3;
+}
+
+// Page footer
+// -----------------------------------------------------------------------------
 /* 
 Page footer
 
@@ -22,10 +42,10 @@ Markup:
 
 Styleguide 3.1.2
  */
-
-// TODO: Add molecules inside page footer
 .page-footer {
-  @extend .page-header;
+  background-color: $footer-bg-color;
+  color: $footer-color;
+  text-align: center;
+  padding: $space 0 $space-double;
 }
 
-// -----------------------------------------------------------------------------

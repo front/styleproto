@@ -20,7 +20,7 @@ Styleguide 1.6.1
   color: $btn-color;
   background-color: $btn-bg-color;
   display: inline-block;
-  padding: 6px 12px; // Global mixin?
+  padding: $space-half $space;
   margin-bottom: 0;
   font-size: 1em;
   font-weight: normal;
@@ -31,7 +31,6 @@ Styleguide 1.6.1
   vertical-align: middle;
   cursor: pointer;
   border: 1px solid transparent;
-  border-radius: 4px; // Global variable?
   user-select: none;
 
   &:hover,

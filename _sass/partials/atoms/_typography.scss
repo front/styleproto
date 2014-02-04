@@ -36,14 +36,19 @@ Styleguide 1.2.1
 // Address variable `h1` font-size and margin within `section` and `article`
 // contexts in Firefox 4+, Safari 5, and Chrome.
 
-%header-heavy {
-  font-weight: 600;
+%header-weight-first {
+  font-weight: 700;
+}
+
+%header-weight-second {
+  font-weight: 800;
 }
 
 h1,
 .h1 {
-  @extend %header-heavy;
+  @extend %header-weight-first;
   text-transform: none;
+  color: $header-color-first;
   @include adjust-font-size-to( $h1-font-size );
   @include leader(2, $h1-font-size);
   @include trailer(.5, $h1-font-size);
@@ -51,8 +56,9 @@ h1,
 
 h2,
 .h2 {
-  @extend %header-heavy;
+  @extend %header-weight-first;
   text-transform: none;
+  color: $header-color-first;
   @include adjust-font-size-to( $h2-font-size, 2.3 );
   @include leader(2, $h2-font-size);
   @include trailer(.5, $h2-font-size);
@@ -60,8 +66,9 @@ h2,
 
 h3,
 .h3 {
-  @extend %header-heavy;
+  @extend %header-weight-first;
   text-transform: none;
+  color: $header-color-first;
   @include adjust-font-size-to( $h3-font-size, 2 );
   @include leader(2, $h3-font-size);
   @include trailer(.5, $h3-font-size);
@@ -69,8 +76,9 @@ h3,
 
 h4,
 .h4 {
-  font-weight: 400;
+  @extend %header-weight-second;
   text-transform: uppercase;
+  color: $header-color-second;
   @include adjust-font-size-to( $h4-font-size, 1.5 );
   @include leader(2, $h4-font-size);
   @include trailer(.5, $h4-font-size);
@@ -78,8 +86,9 @@ h4,
 
 h5,
 .h5 {
-  font-weight: 400;
+  @extend %header-weight-second;
   text-transform: uppercase;
+  color: $header-color-second;
   @include adjust-font-size-to( $h5-font-size, 1.25 );
   @include leader(1.5, $h5-font-size);
   @include trailer(.5, $h5-font-size);
@@ -87,8 +96,9 @@ h5,
 
 h6,
 .h6 {
-  @extend %header-heavy;
+  @extend %header-weight-second;
   text-transform: uppercase;
+  color: $header-color-second;
   @include adjust-font-size-to( $h6-font-size );
   @include leader(1, $h6-font-size);
   @include trailer(0, $h6-font-size);
@@ -134,8 +144,9 @@ pre {
 
 blockquote {
   margin: rhythm(1) 0 rhythm(1); 
-  border-left: 4px solid $blockquote-border-color;
+  border-left: 6px solid $blockquote-border-color;
   padding-left: $space-double;
+  color: $blockquote-color;
   font-style: italic;
   font-weight: 300;
 

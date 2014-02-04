@@ -2,7 +2,12 @@ body {
   font-family: 'Source Sans Pro', Verdana, Arial, sans-serif;
   font-size: $base-font-size;
   line-height: $base-line-height;
-  // @include adjust-font-size-to($base-font-size);
+  color: $base-color;
+  -webkit-font-smoothing: antialiased;
+
+  @include breakpoint(max-width $break-small) {
+    font-size: 16px;
+  }
 
   // Show horizontal lines in development
   @if($show-vertical-rythm) {
@@ -11,14 +16,17 @@ body {
 
   @if($show-breakpoint-bg) {  
     background-color: hsla(0, 100%, 50%, .1);
-    @include breakpoint($break-small) {
+    @include breakpoint($break-xsmall) {
       background-color: hsla(50, 100%, 50%, .1);
     }
-    @include breakpoint($break-medium) {
+    @include breakpoint($break-small) {
       background-color: hsla(100, 100%, 50%, .1);
     }
-    @include breakpoint($break-large) {
+    @include breakpoint($break-medium) {
       background-color: hsla(150, 100%, 50%, .1);
+    }
+    @include breakpoint($break-large) {
+      background-color: hsla(200, 100%, 50%, .1);
     }
   }
 }

@@ -4,58 +4,10 @@ $show-grid-columns: false !default;
 $show-vertical-rythm: false !default;
 $show-breakpoint-bg: false !default;
 
-// Colors
-// -----------------------------------------------------------------------------
-
-// Don't use this variable directly in code
-$color-blue: dodgerblue;
-$color-blue-desaturated: #A4ACB2;
-$color-yellow-desaturated: #B2B2A4;
-$color-gray: #aaa;
-$color-lightgray: #f0f0f0;
-
-// Links
-$link-color: $color-blue;
-$link-color-hover: lighten($link-color, 10%);
-$link-color-active: darken($link-color, 5%);
-
-// Buttons
-// Default button
-$btn-color: white;
-$btn-bg-color: $color-blue-desaturated;
-$btn-bg-color-hover: lighten($btn-bg-color, 5%);
-$btn-bg-color-active: darken($btn-bg-color, 3%);
-
-// Call to action button
-$btn-cta-color: white;
-$btn-cta-bg-color: $color-yellow-desaturated;
-$btn-cta-bg-color-hover: lighten($btn-cta-bg-color, 5%);
-$btn-cta-bg-color-active: darken($btn-cta-bg-color, 3%);
-
-// Neutral button
-$btn-neutral-color: #777;
-$btn-neutral-color-hover: #555;
-$btn-neutral-bg-color: $color-lightgray;
-$btn-neutral-bg-color-hover: lighten($btn-neutral-bg-color, 2%);
-$btn-neutral-bg-color-active: darken($btn-neutral-bg-color, 3%);
-
 // Docs element
-$docs-bg: $color-lightgray;
+// -----------------------------------------------------------------------------
+$docs-bg: $color-gray-light;
 $docs-border: $color-gray;
-
-// Space
-// -----------------------------------------------------------------------------
-$space: $base-font-size;
-$space-half: $space * 0.5;
-$space-double: $space * 2;
-
-// Normalize variables
-// -----------------------------------------------------------------------------
-
-// Set this to true to force CSS output to exactly match normalize.css.
-$strict-normalize: true !default;
-$strict-normalize: false;
-
 
 // Typography
 // -----------------------------------------------------------------------------
@@ -67,7 +19,10 @@ $base-font-family: sans-serif !default;
 $base-font-size: 18px; // Original 16px
 
 // Vertical rythm base line height
-$base-line-height: 28px; // Original 24px
+$base-line-height: 27px; // Original 24px
+
+// Default text color set on body element
+$base-color: $color-black;
 
 // The font sizes for h1-h6.
 // Perfect fourth http://modularscale.com/scale/?px1=16&px2=&ra1=1.333&ra2=0
@@ -78,19 +33,24 @@ $h4-font-size: 1.777    * $base-font-size !default;
 $h5-font-size: 1.333    * $base-font-size !default;
 $h6-font-size: 1        * $base-font-size !default;
 
+$header-color-first: $color-black;
+$header-color-second: $color-gray-dark;
+
 // The amount lists and blockquotes are indented.
 $indent-amount: 40px !default;
 
 // Blockquote
-$blockquote-border-color: $color-gray;
+$blockquote-border-color: $color-gray-dark;
+$blockquote-color: $color-gray-dark;
 $blockquote-font-size: 1.333 * $base-font-size !default;
 
 
 // Main breakpoints
 // -----------------------------------------------------------------------------
-$break-small: 30em; // 480px
-$break-medium: 43em; // 688px 
-$break-large: 60em; // 960px
+$break-xsmall: 18em; // 288px / 16px
+$break-small: 30em; // 480px / 16px
+$break-medium: 38em; // 684px / 18px
+$break-large: 53em; // 954px / 18px
 
 // IE support
 // -----------------------------------------------------------------------------

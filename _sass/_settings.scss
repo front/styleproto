@@ -74,6 +74,10 @@ $nav-border-color: scale-color($nav-bg-color, $lightness: -15%);
 $nav-bg-color-focus: scale-color($nav-bg-color, $lightness: 15%);
 $nav-color: $color-gray-light;
 
+$nav-btn-color: $color-black;
+$nav-btn-color-active: $color-white;
+$nav-btn-bg-color-active: $color-red;
+
 // Sections
 // -----------------------------------------------------------------------------
 // Footer

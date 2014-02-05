@@ -21,11 +21,18 @@ Styleguide 3.1.1
 
 .page-header .nav-main-toggle {
   position: absolute;
-  right: $space;
-  top: $space;
+  right: 0;
+  top: 0;
+  diplay: inline-block;
+  padding: 13px;
+  color: $nav-btn-color;
+  font-size: 30px;
+  @include transition(all .5s ease);
 
   .active-nav & {
-    right: 67%;
+    right: 65%;
+    color: $nav-btn-color-active;
+    background-color: $nav-btn-bg-color-active;
   }
 }
 

@@ -62,6 +62,7 @@ Styleguide 2.5.1
   background: #191818;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  @include transition-duration(.2s);
 
 }
 

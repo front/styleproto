@@ -32,6 +32,10 @@ Styleguide 2.2.1
   @include breakpoint($break-large) {
     padding: $space_large 0 $space_large-double;
   }
+
+  @include breakpoint($break-xlarge) {
+    padding: $space_large-double 0 ($space_large * 3);
+  }
 }
 
 .banner--title {

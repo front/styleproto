@@ -1,7 +1,23 @@
 .template-front {
+
   @include breakpoint($break-medium) {
     .widget__contact {
       margin-bottom: $space;
+    }
+  }
+
+  // Banner
+  .banner {
+    background: image-url('content/tmp-banner-1.jpg') no-repeat;
+    background-position: 35% 64%;
+    text-align: left;
+    padding-right: 30%;
+    
+    @include breakpoint($break-large) {
+      text-align: center;
+      padding-right: 0;
+      background-size: 100%;
+      background-position: left 0 bottom 57%;
     }
   }
 }

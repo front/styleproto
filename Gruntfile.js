@@ -20,6 +20,7 @@ module.exports = function (grunt) {
         relativeAssets: true,
         environment: 'development',
         sassDir: '_sass',
+        imagesDir: 'img',
         fontsDir: 'fonts'
 
       },

@@ -20,10 +20,13 @@ Styleguide 2.7.1
 */
 .widget {
   text-align: center;
+  padding: $space 0;
 }
 
 .widget--title {
   @include adjust-font-size-to($h4-font-size);
+  @include leader(0);
+  @include trailer(0);
 }
 
 .widget--desc {
@@ -48,12 +51,30 @@ Markup:
 Styleguide 2.7.2
 */
 .widget__contact {
+  @extend .clearfix;
+  @include breakpoint($break-medium) {
+    text-align: left;
+    padding: $space-double;
+    @include background-image(linear-gradient(top, $docs-bg, darken($docs-bg, 10)));
+  }
 }
 
-.widget__contact--title {
-
-}
+.widget__contact--title {}
 
 .widget__contact--desc {
+  @include breakpoint($break-medium) {
+    float: left;
+    max-width: 60%;
+  }
+}
 
+.widget__contact--info {
+  @include breakpoint($break-medium) {
+    text-align: right;
+
+  }
+}
+
+.widget__contact--info li + li {
+  margin-top: $space-half;
 }

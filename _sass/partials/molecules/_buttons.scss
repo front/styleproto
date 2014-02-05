@@ -1,0 +1,19 @@
+/*
+Icon buttons
+
+Markup:
+<a href="#0" class="btn btn-icon">Link Button</a>
+<button class="btn btn-icon">Button Element</button>
+<input type="btn btn-icon" class="btn {$modifiers}" value="Input Element"/>
+
+// Styleguide 2.11.1
+*/
+.btn-icon {
+  position: relative;
+
+  &:before {
+    position: relative;
+    top: 3px;
+    left: -0.4em;
+  }
+}

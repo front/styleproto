@@ -1,0 +1,7 @@
+.template-front {
+  @include breakpoint($break-medium) {
+    .widget__contact {
+      margin-bottom: $space;
+    }
+  }
+}

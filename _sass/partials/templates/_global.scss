@@ -12,5 +12,27 @@
 .featured-section {
   .featured {
     margin-top: $space * 3;
+
+    @include breakpoint($break-medium) {
+      margin-top: $space_large;
+    }
+
+    @include breakpoint($break-large) {
+      margin-top: $space_large * 1.5;
+    }
+  }
+}
+
+// Page main
+// -----------------------------------------------------------------------------
+.page-main {
+  margin-bottom: $space * 3;
+
+  @include breakpoint($break-medium) {
+    margin-bottom: $space_large;
+  }
+
+  @include breakpoint($break-large) {
+    margin-bottom: $space_large * 1.5;
   }
 }

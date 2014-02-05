@@ -17,6 +17,12 @@ $space: $base-font-size;
 $space-half: $space * 0.5;
 $space-double: $space * 2;
 
+// Largscreen space
+$space_large: $space * 5;
+$space_large-half: $space_large * 0.5;
+$space_large-double: $space_large * 2;
+
+
 // Normalize variables
 // -----------------------------------------------------------------------------
 // Set this to true to force CSS output to exactly match normalize.css.

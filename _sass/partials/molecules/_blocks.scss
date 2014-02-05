@@ -24,6 +24,14 @@ Styleguide 2.2.1
   text-align: center;
   padding: 0 0 $space-double;
   @include background-image(linear-gradient(top, $docs-bg, darken($docs-bg, 10)));
+
+  @include breakpoint($break-medium) {
+    padding: $space_large-half 0 $space_large;
+  }
+
+  @include breakpoint($break-large) {
+    padding: $space_large 0 $space_large-double;
+  }
 }
 
 .banner--title {

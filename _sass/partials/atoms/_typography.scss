@@ -49,9 +49,15 @@ h1,
   @extend %header-weight-first;
   text-transform: none;
   color: $header-color-first;
-  @include adjust-font-size-to( $h1-font-size );
-  @include leader(2, $h1-font-size);
-  @include trailer(.5, $h1-font-size);
+  @include adjust-font-size-to( $h1-font-size * 0.75, 2);
+  @include leader(2, $h1-font-size * 0.75);
+  @include trailer(.5, $h1-font-size * 0.75);
+
+  @include breakpoint($break-small) {
+    @include adjust-font-size-to( $h1-font-size );
+    @include leader(2, $h1-font-size);
+    @include trailer(.5, $h1-font-size);
+  }
 }
 
 h2,
@@ -59,9 +65,15 @@ h2,
   @extend %header-weight-first;
   text-transform: none;
   color: $header-color-first;
-  @include adjust-font-size-to( $h2-font-size, 2.3 );
-  @include leader(2, $h2-font-size);
-  @include trailer(.5, $h2-font-size);
+  @include adjust-font-size-to( $h2-font-size * 0.8, 1.5 );
+  @include leader(1.5, $h2-font-size * 0.75);
+  @include trailer(.5, $h2-font-size * 0.75);
+  
+  @include breakpoint($break-small) {
+    @include adjust-font-size-to( $h2-font-size, 2.3 );
+    @include leader(2, $h2-font-size);
+    @include trailer(.5, $h2-font-size);  
+  }
 }
 
 h3,
@@ -69,9 +81,15 @@ h3,
   @extend %header-weight-first;
   text-transform: none;
   color: $header-color-first;
-  @include adjust-font-size-to( $h3-font-size, 2 );
-  @include leader(2, $h3-font-size);
-  @include trailer(.5, $h3-font-size);
+  @include adjust-font-size-to( $h3-font-size * 0.9, 1.5 );
+  @include leader(1.5, $h3-font-size * 0.8);
+  @include trailer(.5, $h3-font-size * 0.8);
+
+  @include breakpoint($break-small) {
+    @include adjust-font-size-to( $h3-font-size, 2 );
+    @include leader(2, $h3-font-size);
+    @include trailer(.5, $h3-font-size);
+  }
 }
 
 h4,
@@ -79,9 +97,13 @@ h4,
   @extend %header-weight-second;
   text-transform: uppercase;
   color: $header-color-second;
-  @include adjust-font-size-to( $h4-font-size, 1.5 );
-  @include leader(2, $h4-font-size);
+  @include adjust-font-size-to( $h4-font-size, 1.25 );
+  @include leader(1.5, $h4-font-size);
   @include trailer(.5, $h4-font-size);
+
+  @include breakpoint($break-small) {
+    color: $header-color-first;
+  }
 }
 
 h5,
@@ -89,9 +111,13 @@ h5,
   @extend %header-weight-second;
   text-transform: uppercase;
   color: $header-color-second;
-  @include adjust-font-size-to( $h5-font-size, 1.25 );
+  @include adjust-font-size-to( $h5-font-size, 1 );
   @include leader(1.5, $h5-font-size);
   @include trailer(.5, $h5-font-size);
+
+  @include breakpoint($break-small) {
+    color: $header-color-first;
+  }
 }
 
 h6,
@@ -99,9 +125,13 @@ h6,
   @extend %header-weight-second;
   text-transform: uppercase;
   color: $header-color-second;
-  @include adjust-font-size-to( $h6-font-size );
+  @include adjust-font-size-to( $h6-font-size, .75 );
   @include leader(1, $h6-font-size);
   @include trailer(0, $h6-font-size);
+
+  @include breakpoint($break-small) {
+    color: $header-color-first;
+  }
 }
 
 /* 
@@ -128,7 +158,6 @@ Additionally the source can be wrapped in `<small>`
 markup: 
 <blockquote>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-  <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
 </blockquote>
 
 Styleguide 1.2.5 

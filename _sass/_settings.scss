@@ -65,7 +65,7 @@ $link-color-active: darken($link-color, 5%);
 // Blockquote
 $blockquote-border-color: $color-gray-dark;
 $blockquote-color: $color-gray-dark;
-$blockquote-font-size: 1.333 * $base-font-size !default;
+$blockquote-font-size: $h5-font-size;
 
 // Navigation
 // -----------------------------------------------------------------------------

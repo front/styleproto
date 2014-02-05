@@ -11,7 +11,7 @@ Styleguide 1.3
 Unordered list
 
 markup:
-<ul>
+<ul class="{$modifiers}">
   <li>This is a list item in an unordered list</li>
   <li>An unordered list is a list in which the sequence of items is not important. Sometimes, an unordered list is a bulleted list. And this is a long list item in an unordered list that can wrap onto a new line. </li>
   <li>
@@ -23,6 +23,8 @@ markup:
   </li>
   <li>This is the last list item</li>
 </ul>
+
+.list-reset        - Reset default list style
 
 Styleguide 1.3.1
  */
@@ -36,12 +38,29 @@ ul {
   }
 }
 
+.list-reset {
+  list-style: none; 
+  margin: 0;
+  padding: 0;
+
+  ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
 // -----------------------------------------------------------------------------
 /* 
 Ordered list
 
 markup: 
-<ol>
+<ol class="{$modifiers}">
   <li>This is a list item in an ordered list</li>
   <li>An ordered list is a list in which the sequence of items is important. An ordered list does not necessarily contain sequence characters.</li>
   <li>
@@ -53,6 +72,8 @@ markup:
   </li>
   <li>This is the last list item</li>
 </ol>
+
+.list-reset        - Reset default list style
 
 Styleguide 1.3.2
  */

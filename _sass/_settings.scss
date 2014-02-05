@@ -69,9 +69,10 @@ $blockquote-font-size: 1.333 * $base-font-size !default;
 
 // Navigation
 // -----------------------------------------------------------------------------
-$nav-bg-color: $color-gray-light;
+$nav-bg-color: $color-gray-dark;
 $nav-border-color: scale-color($nav-bg-color, $lightness: -15%);
-$nav-bg-color-focus: scale-color($nav-bg-color, $lightness: 25%); 
+$nav-bg-color-focus: scale-color($nav-bg-color, $lightness: 15%);
+$nav-color: $color-gray-light;
 
 // Sections
 // -----------------------------------------------------------------------------

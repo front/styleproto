@@ -23,6 +23,10 @@ Styleguide 3.1.1
   position: absolute;
   right: $space;
   top: $space;
+
+  .active-nav & {
+    right: 67%;
+  }
 }
 
 

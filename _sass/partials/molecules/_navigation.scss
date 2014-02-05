@@ -39,6 +39,7 @@ Styleguide 2.5.1
   display: block;
   background-color: $nav-bg-color;
   border-bottom: 1px solid $nav-border-color;
+  color: $nav-color;
 
   &:hover,
   &:focus {
@@ -48,6 +49,24 @@ Styleguide 2.5.1
 
 .nav--item:first-child .nav--link {
   border-top: 1px solid $nav-border-color;
+}
+
+.js .nav__main {
+  margin-right: -65%;
+  width: 65%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  background: #191818;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+}
+
+.js .active-nav .nav__main {
+  margin-right: 0;
 }
 
 // Breadcrumbs

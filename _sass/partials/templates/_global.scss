@@ -3,8 +3,10 @@
 
 // Contact section
 .contact-section {
-  @include breakpoint(max-width $break-medium) {
-    @include background-image(linear-gradient(top, $docs-bg, darken($docs-bg, 10)));
+  @include background-image(linear-gradient(top, hsl(0, 0%, 90%),hsl(0, 0%, 95%) 10%,hsl(0, 0%, 95%)));
+  
+  @include breakpoint($break-large) {
+    padding: $space_large-half 0;
   }
 }
 

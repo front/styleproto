@@ -55,7 +55,6 @@ Styleguide 2.7.2
   @include breakpoint($break-medium) {
     text-align: left;
     padding: $space-double;
-    @include background-image(linear-gradient(top, $docs-bg, darken($docs-bg, 10)));
   }
 }
 

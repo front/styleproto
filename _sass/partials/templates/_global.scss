@@ -21,6 +21,22 @@
       margin-top: $space_large * 1.5;
     }
   }
+
+  .g-item {
+    @include breakpoint($break-medium) {
+      $output: 'isolation';
+      
+      &:nth-child(1) {
+        @include grid-span(4,9);
+      }
+      &:nth-child(2) {
+        @include grid-span(4,1);
+      }
+      &:nth-child(3) {
+        @include grid-span(4,5);
+      }
+    }
+  }
 }
 
 // Page main

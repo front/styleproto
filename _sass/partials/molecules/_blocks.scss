@@ -70,10 +70,29 @@ Styleguide 2.2.2
 */
 .featured {
   text-align: center;
+
+  @include breakpoint($break-xsmall $break-medium) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 20em;
+  }
+
+  @include breakpoint($break-medium $break-large) {
+    text-align: left;
+    @include clearfix;
+  }
 }
 
 .featured--img {
   max-width: 50%;
+
+  @include breakpoint($break-medium $break-large) {
+    float: left;
+    width: 25%;
+    margin-right: 5%;
+    position: relative;
+    top: -($space);
+  }
 }
 
 .featured--title {

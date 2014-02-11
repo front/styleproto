@@ -3,8 +3,9 @@
 
 // Contact section
 .contact-section {
-  @include background-image(linear-gradient(top, hsl(0, 0%, 90%),hsl(0, 0%, 95%) 10%,hsl(0, 0%, 95%)));
-  
+  background-color: hsl(0, 0%, 13%);
+  color: white;  
+
   @include breakpoint($break-large) {
     padding: $space_large-half 0;
   }
@@ -16,27 +17,11 @@
     margin-top: $space * 3;
 
     @include breakpoint($break-medium) {
-      margin-top: $space_large;
+      margin-top: $space_large-half;
     }
 
     @include breakpoint($break-large) {
       margin-top: $space_large * 1.5;
-    }
-  }
-
-  .g-item {
-    @include breakpoint($break-medium) {
-      $output: 'isolation';
-      
-      &:nth-child(1) {
-        @include grid-span(4,9);
-      }
-      &:nth-child(2) {
-        @include grid-span(4,1);
-      }
-      &:nth-child(3) {
-        @include grid-span(4,5);
-      }
     }
   }
 }

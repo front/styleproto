@@ -186,6 +186,7 @@ blockquote {
   }
 }
 
+// Inline elements
 // -----------------------------------------------------------------------------
 /* 
 Inline elements
@@ -214,6 +215,19 @@ markup:
 
 Styleguide 1.2.6
  */
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $link-color-hover;
+  }
+
+  &:active {
+    color: $link-color-active;
+  }
+}
 
 /* 
 Time

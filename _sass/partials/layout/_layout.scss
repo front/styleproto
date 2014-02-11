@@ -227,3 +227,41 @@ Styleguide 4.3
     }
   }
 }
+
+// Featured layout
+// -----------------------------------------------------------------------------
+/*
+Featured layout
+
+Layout that are used to show featured product and services
+
+Markup:
+<div class="l-one-two-one">
+  <div class="l-item__main"></div>
+  <div class="l-item__aside-first"></div>
+  <div class="l-item__aside-second"></div>
+</div>
+
+Styleguide 4.3
+ */
+.l-featured {
+  .l-item {
+    @include breakpoint($break-medium $break-large) {
+      clear: both;
+    }
+
+    @include breakpoint($break-large) {
+      // $output: 'isolation';
+      
+      &:nth-child(1) {
+        @include grid-span(4,9);
+      }
+      &:nth-child(2) {
+        @include grid-span(4,1);
+      }
+      &:nth-child(3) {
+        @include grid-span(4,5);
+      }
+    }
+  }
+}

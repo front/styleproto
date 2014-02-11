@@ -4,7 +4,17 @@
 Page header
 
 Markup:
-<header class="page-header"></header>
+<header class="page-header">
+  <div class="l-container">
+    <h1 class="logo">
+      <a href="#">
+        <span class="logo--name">Firmanavn</span>
+        <img class="logo--img" src="/img/logo.svg" alt="Logo">
+      </a>
+    </h1>
+    <a class="nav-main-toggle" href="#nav__main" data-icon="m"></a>
+  </div>
+</header>
 
 Styleguide 3.1.1
 */
@@ -44,7 +54,15 @@ Styleguide 3.1.1
 Page footer
 
 Markup:
-<footer class="page-footer"></footer>
+<footer class="page-footer">
+  <div class="l-container">
+    <ul class="social-links">
+      <li><a href="#0" data-icon="f" class="social-link-facebook"><span>Facebook</span></a></li>
+      <li><a href="#0" data-icon="t" class="social-link-twitter"><span>Twitter</span></a></li>
+      <li><a href="#0" data-icon="g" class="social-link-googleplus"><span>Google+</span></a></li>
+    </ul>
+  </div>
+</footer>
 
 Styleguide 3.1.2
  */

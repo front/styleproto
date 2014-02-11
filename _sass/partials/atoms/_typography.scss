@@ -48,7 +48,7 @@ h1,
 .h1 {
   @extend %header-weight-first;
   text-transform: none;
-  color: $header-color-first;
+  color: $header-color;
   @include adjust-font-size-to( $h1-font-size * 0.75, 2);
   @include leader(2, $h1-font-size * 0.75);
   @include trailer(.5, $h1-font-size * 0.75);
@@ -64,7 +64,7 @@ h2,
 .h2 {
   @extend %header-weight-first;
   text-transform: none;
-  color: $header-color-first;
+  color: $header-color;
   @include adjust-font-size-to( $h2-font-size * 0.8, 1.5 );
   @include leader(1.5, $h2-font-size * 0.75);
   @include trailer(.5, $h2-font-size * 0.75);
@@ -80,7 +80,7 @@ h3,
 .h3 {
   @extend %header-weight-first;
   text-transform: none;
-  color: $header-color-first;
+  color: $header-color;
   @include adjust-font-size-to( $h3-font-size * 0.9, 1.5 );
   @include leader(1.5, $h3-font-size * 0.8);
   @include trailer(.5, $h3-font-size * 0.8);
@@ -102,7 +102,7 @@ h4,
   @include trailer(.5, $h4-font-size);
 
   @include breakpoint($break-small) {
-    color: $header-color-first;
+    color: $header-color;
   }
 }
 
@@ -116,7 +116,7 @@ h5,
   @include trailer(.5, $h5-font-size);
 
   @include breakpoint($break-small) {
-    color: $header-color-first;
+    color: $header-color;
   }
 }
 
@@ -130,7 +130,7 @@ h6,
   @include trailer(0, $h6-font-size);
 
   @include breakpoint($break-small) {
-    color: $header-color-first;
+    color: $header-color;
   }
 }
 

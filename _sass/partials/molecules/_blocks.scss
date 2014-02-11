@@ -79,6 +79,16 @@ Styleguide 2.2.2
 .featured--title {
   @include adjust-font-size-to($h4-font-size, 1);
   @include leader(.5, $h4-font-size);
+
+  a {
+    color: $header-color;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $header-color-hover;
+    }
+  }
 }
 
 .featured--desc {}

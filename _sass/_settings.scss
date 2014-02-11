@@ -54,13 +54,15 @@ $h4-font-size: 1.777    * $base-font-size !default; // 28.43px
 $h5-font-size: 1.333    * $base-font-size !default; // 21.328px
 $h6-font-size: 1        * $base-font-size !default; // 16px
 
-$header-color-first: $color-black;
-$header-color-second: $color-gray-dark;
+$header-color: $color-black;
 
 // Links
 $link-color: $color-blue;
 $link-color-hover: lighten($link-color, 10%);
 $link-color-active: darken($link-color, 5%);
+
+$header-color-hover: $link-color;
+$header-color-second: $color-gray-dark;
 
 // Blockquote
 $blockquote-border-color: $color-gray-dark;

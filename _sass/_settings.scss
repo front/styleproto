@@ -86,6 +86,9 @@ $nav-btn-bg-color-active: $alert-color;
 $footer-bg-color: $color-black;
 $footer-color: $color-gray;
 
+$footer-link-color: scale-color($footer-color, $lightness: 20%);
+$footer-link-color-hover: scale-color($footer-link-color, $lightness: 15%);
+
 // Main breakpoints
 // -----------------------------------------------------------------------------
 $break-xsmall: 18em; // 288px / 16px

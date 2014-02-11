@@ -1,0 +1,19 @@
+// Functions Partials
+//
+// All of your functions should go in this file.
+
+// Convert pixels to ems.
+@function em($pxval, $base: $base-font-size) {
+  @if not unitless($pxval) {
+    $pxval: strip-units($pxval);
+  }
+  @if not unitless($base) {
+    $base: strip-units($base);
+  }
+  @return ($pxval / $base) * 1em;
+}
+
+// Strips the units from a value. e.g. 12px -> 12
+@function strip-units($val) {
+  @return ($val / ($val * 0 + 1));
+}

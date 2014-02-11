@@ -8,7 +8,7 @@ Styleguide 2.6
 // -----------------------------------------------------------------------------
 
 /*
-Social share
+Social links
 
 Markup:
 <div class="social-share">
@@ -23,7 +23,17 @@ Markup:
 Styleguide 2.6.1
 */
 
+.social-links {
+  @extend .list-inline;
 
+  li + li {
+    margin-left: $space;
+  }
+
+  span {
+    @extend .visuallyhidden;
+  }
+}
 // -----------------------------------------------------------------------------
 
 /*

@@ -51,7 +51,26 @@ Styleguide 3.1.2
 .page-footer {
   background-color: $footer-bg-color;
   color: $footer-color;
+  padding: $space-double 0;
   text-align: center;
-  padding: $space 0 $space-double;
+
+  @include breakpoint($break-medium) {
+    text-align: right;
+  }
 }
 
+// Footer links
+.page-footer a {
+  color: $footer-link-color;
+
+  &:hover,
+  &:focus {
+    color: $footer-link-color-hover;
+  }
+}
+
+// Footer social links
+.page-footer .social-links {
+  // @include adjust-font-size-to(20px);
+  font-size: em(24);
+}

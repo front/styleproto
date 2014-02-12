@@ -53,17 +53,19 @@ Styleguide 2.2.1
 
 .banner--btn {}
 
+
 // Featured
 // -----------------------------------------------------------------------------
 /* 
 Featured
 
 Markup:
-<article class="g-item featured">
-  <img class="featured--img" src="/img/logo.svg" alt="Logo">
-  <h2 class="h4 featured--title">Strategy</h2>
-  <p class="featured--desc">A few words that explains a little bit more</p>
-  <a href="#0" class="btn-text featured--btn">Link to feature</a>
+<article class="l-item featured">
+  <a href="#0"><img class="featured--img" src="/img/content/target.svg" alt="Blink"></a>
+  <h2 class="featured--title"><a href="#0">Målrettet</a></h2>
+  <p class="featured--desc">
+    Suspendisse id velit vitae ligula volutpat condimentum. Aliquam erat volutpat
+  </p>
 </article>
 
 Styleguide 2.2.2
@@ -111,3 +113,78 @@ Styleguide 2.2.2
 }
 
 .featured--desc {}
+
+
+// Widget
+// -----------------------------------------------------------------------------
+/*
+Widget
+
+Markup:
+<article class="widget widget__contact">
+  <h2 class="widget--title">Widget title</h2>
+  <p class="widget--desc">Widget description</p>
+</article>
+
+Styleguide 2.2.3
+*/
+.widget {
+  text-align: center;
+  padding: $space 0;
+}
+
+.widget--title {
+  @include adjust-font-size-to($h4-font-size);
+  @include leader(0);
+  @include trailer(0);
+}
+
+.widget--desc {
+
+}
+
+
+// Contact widget
+// -----------------------------------------------------------------------------
+/*
+Contect widget
+
+Markup:
+<div class="widget widget__contact">
+  <h2 class="widget--title widget__contact--title">Ta kontakt!</h2>
+  <p class="widget--desc widget__contact--desc">Ikke nøl med å ringe eller sende oss en e-post for å snakke om hvordan vi kan samarbeide. Vi tar også gjerne imot <a href="#0">besøk</a></p>
+  <ul class="widget__contact--info list-reset">
+    <li><a class="widget__contact--info--phone btn btn-icon" href="tel:69304400" data-icon="p">69 30 44 00</a></li>
+    <li><a class="widget__contact--info--email btn btn-icon" href="mailto:post@frontkom.no" data-icon="e">post@frontkom.no</a></li>
+  </ul>
+</div>
+
+Styleguide 2.2.4
+*/
+.widget__contact {
+  @extend .clearfix;
+  @include breakpoint($break-medium) {
+    text-align: left;
+    padding: $space-double;
+  }
+}
+
+.widget__contact--title {}
+
+.widget__contact--desc {
+  @include breakpoint($break-medium) {
+    float: left;
+    max-width: 60%;
+  }
+}
+
+.widget__contact--info {
+  @include breakpoint($break-medium) {
+    text-align: right;
+
+  }
+}
+
+.widget__contact--info li + li {
+  margin-top: $space-half;
+}

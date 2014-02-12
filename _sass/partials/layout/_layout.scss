@@ -32,7 +32,7 @@ $gutters: add-gutter(.5 at $break-medium);
 }
 
 // Documentation style
-[class^="l-item__"] {
+[class^="l-item"] {
   .docs & {
     background-color: $docs-bg;
     min-height: $space-double; 
@@ -177,8 +177,6 @@ Styleguide 4.2
 /*
 Layout, three columns
 
-Description...
-
 Markup:
 <div class="l-one-two-one">
   <div class="l-item__main"></div>
@@ -236,10 +234,10 @@ Featured layout
 Layout that are used to show featured product and services
 
 Markup:
-<div class="l-one-two-one">
-  <div class="l-item__main"></div>
-  <div class="l-item__aside-first"></div>
-  <div class="l-item__aside-second"></div>
+<div class="l-featured">
+  <div class="l-item"></div>
+  <div class="l-item"></div>
+  <div class="l-item"></div>
 </div>
 
 Styleguide 4.3

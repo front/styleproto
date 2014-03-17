@@ -21,7 +21,7 @@
     }
 
     @include breakpoint($break-large) {
-      margin-top: $space_large * 1.5;
+      margin-top: $space_large;
     }
   }
 }

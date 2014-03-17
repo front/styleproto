@@ -60,7 +60,7 @@ module.exports = function (grunt) {
         }
       },
       jekyll: {
-        files: ['**/*.html', 'css/*.css'],
+        files: ['**/*.html', '_posts/*.md', 'css/*.css'],
         tasks: ['jekyll', 'copy:bower']
       }
     },

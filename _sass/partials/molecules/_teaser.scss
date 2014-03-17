@@ -1,0 +1,86 @@
+/* 
+Teasers
+
+Short sumaries that leads into more content. Eigther on a new page or by ajax
+loading into same page.
+
+Styleguide 2.7
+*/
+
+// Teaser
+// -----------------------------------------------------------------------------
+/*
+Teaser
+
+Markup:
+<article class="teaser__large">
+  <img src="http://placehold.it/300x300" alt="" class="teaser--img">
+  <h2 class="teaser--title">Article title</h2>
+  <p class="teaser--desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim. Suspendisse id velit vitae ligula volutpat condimentum. Aliquam erat volutpat.</p>
+</article>
+
+.teaser__large                - Large teaser
+.teaser__medium               - Medium teaser
+
+Styleguide 2.7.1
+*/
+
+.teaser {
+  @extend .clearfix;
+}
+
+
+.teaser--img {
+  display: block;
+}
+
+.teaser--title {
+  @include adjust-font-size-to($h3-font-size);
+  @include leader(.5, $h3-font-size);
+  @include trailer(0);
+}
+
+.teaser--desc {
+
+}
+
+// Teaser large
+.teaser__large {
+  @extend .teaser;
+
+  + .teaer__large {
+    margin-top: $space;
+  }
+}
+
+.teaser__large {
+
+  .teaser--img {
+    @include breakpoint($break-small) {
+      float: right;
+      margin: 0 0 $space-half $space-half;
+      max-width: 50%;
+    }
+  }
+
+  .teaser--title {
+    @include breakpoint($break-small) {
+      @include leader(0);
+    }
+  }  
+}
+
+
+
+// Teaser medium
+.teaser__medium {
+  @extend .teaser;
+}
+
+.teaser__medium {
+  .teaser--title {
+    @include adjust-font-size-to($h4-font-size);
+    @include leader(.5, $h4-font-size);
+    @include trailer(0);
+  }
+}

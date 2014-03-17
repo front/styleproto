@@ -54,20 +54,20 @@ $output: 'float';
     @include grid-span(1);
 
     @include breakpoint(max-width $break-small) {
-      &:nth-child(even) {
+      &:nth-of-type(even) {
         margin-right: 0;
       }
     }
 
     @include breakpoint($break-small $break-medium) {
-      &:nth-child(3n) {
+      &:nth-of-type(3n) {
         margin-right: 0;
       }
       @include grid-span(2);
     }
 
     @include breakpoint($break-medium) {
-      &:nth-child(4n) {
+      &:nth-of-type(4n) {
         margin-right: 0;
       }
       @include grid-span(3);
@@ -82,14 +82,14 @@ $output: 'float';
     @include grid-span(2);
 
     @include breakpoint($break-small $break-medium) {
-      &:nth-child(even) {
+      &:nth-of-type(even) {
         margin-right: 0;
       }
       @include grid-span(3);
     }
 
     @include breakpoint($break-medium) {
-      &:nth-child(3n) {
+      &:nth-of-type(3n) {
         margin-right: 0;
       }
       @include grid-span(4);
@@ -108,7 +108,7 @@ $output: 'float';
     }
 
     @include breakpoint($break-medium) {
-      &:nth-child(2n) {
+      &:nth-of-type(2n) {
         margin-right: 0;
       }
       @include grid-span(6);

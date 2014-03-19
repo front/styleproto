@@ -1,0 +1,30 @@
+// Tile global
+// -----------------------------------------------------------------------------
+[class^="tile__"] {
+  margin: 0;
+  padding: 0;
+
+  @include breakpoint($break-medium) {
+    li {
+      display: inline-block;
+      margin-right: 1em;
+    }
+  }
+}
+
+// Tile colors
+// -----------------------------------------------------------------------------
+.tile__color .tile--item {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  @include border-radius(50%);
+}
+
+.tile__color--primary {
+  background-color: $color-primary;
+}
+
+.tile__color--secondary {
+  background-color: $color-secondary;
+}

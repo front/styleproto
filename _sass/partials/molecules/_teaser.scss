@@ -13,7 +13,7 @@ Styleguide 2.7
 Teaser
 
 Markup:
-<article class="teaser__large">
+<article class="{$modifiers}">
   <img src="http://placehold.it/300x300" alt="" class="teaser--img">
   <h2 class="teaser--title">Article title</h2>
   <p class="teaser--desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim. Suspendisse id velit vitae ligula volutpat condimentum. Aliquam erat volutpat.</p>

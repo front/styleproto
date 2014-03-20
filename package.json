@@ -1,11 +1,11 @@
 {
-  "name": "frontproto",
-  "version": "0.0.0",
-  "description": "Yeoman / Grunt workflow for frontproto",
+  "name": "ProtoTool",
+  "version": "0.1.0",
+  "description": "Grunt workflow for ProtoTool",
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.1",
-    "grunt-autoprefixer": "~0.2.0",
+    "grunt-autoprefixer": "~0.4.0",
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-compass": "~0.5.0",
     "grunt-contrib-concat": "~0.3.0",

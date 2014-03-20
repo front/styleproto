@@ -32,7 +32,7 @@ module.exports = function (grunt) {
       },
       dev: {
         options: {
-          cssDir: '.tmp/css'
+          cssDir: '.tmp/compass/css'
         }   
       },
       dev_direct: {
@@ -47,10 +47,22 @@ module.exports = function (grunt) {
       }
     },
 
+    autoprefixer: {
+      options: {
+        browsers: ['last 2 version', 'ie 8', 'ie 9']
+      },
+      dev: {
+        expand: true,
+        flatten: true,
+        src: '.tmp/compass/css/*.css',
+        dest: '.tmp/css'
+      }
+    },
+
     watch: {
       sass: {
         files: '_sass/**/*.scss',
-        tasks: ['compass:prod']
+        tasks: ['compass:dev', 'autoprefixer:dev', 'copy:css_dev']
       },
       sass_direct: {
         files: '_sass/**/*.scss',
@@ -117,6 +129,7 @@ module.exports = function (grunt) {
   // Define Tasks
   grunt.registerTask('build', [
     'compass:dev',
+    'autoprefixer:dev',
     'copy:styleguide_doc',
     'shell:styleguide',
     'jekyll',
@@ -133,6 +146,7 @@ module.exports = function (grunt) {
   grunt.registerTask('default', [
     'build',
     'browser_sync',
-    'watch'
+    'watch:sass',
+    'watch:jekyll'
   ]);
 };

@@ -1,3 +1,16 @@
+/*
+Icons
+
+Markup:
+<a href="#0" data-icon="f" class="{$modifiers}"><span class="icon--txt">Facebook</span></a>
+<a href="#0" data-icon="t" class="{$modifiers}"><span class="icon--txt">Twitter</span></a>
+
+.icon__only         - Only show icon
+.icon__left         - Place icon left of the text
+.icon__right        - Only show icon
+
+Styleguide 1.8.1
+*/
 @charset "UTF-8";
 
 @font-face {
@@ -40,6 +53,35 @@
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon:before {
+  position: relative;
+  top: .2em;
+  margin-right: .2em;
+}
+
+.icon__only {
+  @extend .icon;
+
+  .icon--txt {
+    @extend .visuallyhidden;
+  }
+}
+
+.icon__left {
+  @extend .icon;
+}
+
+.icon__right {
+  position: relative;
+  padding-right: 1.2em;
+
+  &:before {
+    position: absolute;
+    top: .2em;
+    right: 0;
+  }
 }
 
 .icon-fontawesome-webfont:before {

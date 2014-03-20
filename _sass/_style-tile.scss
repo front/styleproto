@@ -3,6 +3,7 @@
 [class^="tile__"] {
   margin: 0;
   padding: 0;
+  list-style: none;
 
   @include breakpoint($break-medium) {
     li {
@@ -15,10 +16,13 @@
 // Tile colors
 // -----------------------------------------------------------------------------
 .tile__color .tile--item {
-  display: inline-block;
-  width: 150px;
-  height: 150px;
-  @include border-radius(50%);
+  display: block;
+  height: 4em;
+
+  @include breakpoint($break-medium) {
+    width: 7em;
+    height: 7em;
+  }
 }
 
 .tile__color--primary {
@@ -27,4 +31,31 @@
 
 .tile__color--secondary {
   background-color: $color-secondary;
+}
+
+// Example content
+// -----------------------------------------------------------------------------
+.tile-example-img {
+  display: block;
+
+  @include breakpoint($break-small) {
+    float: right;
+    max-width: 50%;
+    margin: 0 0 $space-half $space;
+  }
+}
+
+.tile__icons__example {
+  margin-top: 1em;
+
+  @include breakpoint($break-small) {
+    margin-top: 0;
+    margin-left: 1em;
+    display: inline-block;
+  }
+
+  li {
+    display: inline-block;
+    margin-right: 1em;
+  }
 }

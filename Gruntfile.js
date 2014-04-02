@@ -77,12 +77,12 @@ module.exports = function (grunt) {
       }
     },
 
-    browser_sync: {
+    browserSync: {
       files: {
-        src: ['_site/css/*.css'],
+        src: ['_site/css/*.css', '_site/**/*.html'],
       },
       options: {
-        watchTask: 'true',
+        watchTask: true,
         ghostMode: {
           clicks: true,
           scroll: true,
@@ -139,13 +139,13 @@ module.exports = function (grunt) {
 
   grunt.registerTask('direct', [
     'build',
-    'browser_sync',
+    'browserSync',
     'watch:sass_direct'
   ]);
 
   grunt.registerTask('default', [
     'build',
-    'browser_sync',
+    'browserSync',
     'watch:sass',
     'watch:jekyll'
   ]);

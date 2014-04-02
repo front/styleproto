@@ -71,6 +71,16 @@ Styleguide 2.5.1
   margin-right: 0;
 }
 
+.js .active-nav .nav__main--exit {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  cursor: pointer; 
+}
+
 // Breadcrumbs
 // -----------------------------------------------------------------------------
 /*

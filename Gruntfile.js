@@ -62,7 +62,7 @@ module.exports = function (grunt) {
     watch: {
       sass: {
         files: '_sass/**/*.scss',
-        tasks: ['compass:dev', 'autoprefixer:dev', 'copy:css_dev']
+        tasks: ['compass:dev', 'autoprefixer:dev', 'copy:css_dev', 'styleguide', 'copy:styleguide']
       },
       sass_direct: {
         files: '_sass/**/*.scss',
@@ -97,7 +97,8 @@ module.exports = function (grunt) {
 
     clean: {
       prod: ['css'],
-      dev: ['.tmp', '_site']
+      dev: ['.tmp', '_site'],
+      styleguide: ['styleguide']
     }, 
 
     copy: {
@@ -112,6 +113,16 @@ module.exports = function (grunt) {
           {expand: true, cwd: '_sass/', src: 'styleguide.md', dest: '.tmp/css/'}
         ]
       },
+      styleguide: {
+        files: [
+          {
+            expand: true,
+            cwd: 'styleguide',
+            src: '**/*',
+            dest: '_site/styleguide'
+          }
+        ]
+      },
       bower: {
         files: [
           {expand: true, cwd: '_bower_components/modernizr', src: 'modernizr.js', dest: '_site/js/partials/modernizr'}
@@ -119,9 +130,20 @@ module.exports = function (grunt) {
       }
     },
 
-    shell: {
-      styleguide: {
-        command: 'kss-node .tmp/css styleguide --css .tmp/css/style.css --template kss-node-templates/kss-node-template-2'
+    // Generates a automatic styleguide using kss-node
+    styleguide: {
+      options: {
+        framework: {
+          name: 'kss'
+        },
+        template: {
+          src: 'kss-node-templates/kss-node-template-2'
+        }
+      },
+      dist: {
+        files: {
+          'styleguide': '.tmp/css/style.css'
+        }
       }
     }
   });
@@ -131,7 +153,7 @@ module.exports = function (grunt) {
     'compass:dev',
     'autoprefixer:dev',
     'copy:styleguide_doc',
-    'shell:styleguide',
+    'styleguide',
     'jekyll',
     'copy:css_dev',
     'copy:bower'
